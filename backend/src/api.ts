@@ -3,8 +3,8 @@ import cors from 'cors';
 
 const api = express();
 
-api.use(express.json());
 api.use(cors());
+api.use(express.json());
 
 // const teste = "teste"
 

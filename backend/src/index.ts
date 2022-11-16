@@ -1,10 +1,10 @@
 import api from './api';
 
-const { PORT } = process.env;
+const { BACKEND_PORT } = process.env;
 
 const server = api.listen(
-  PORT, () => console.log(
-    `Server is running on PORT: ${PORT}`,
+  BACKEND_PORT, () => console.log(
+    `Server is running on PORT: ${BACKEND_PORT}`,
   )
 );
 
