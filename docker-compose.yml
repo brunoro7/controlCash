@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    container_name: db_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: controlCashAdm
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: db_controlCash
+    ports:
+      - 8081:5432
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
