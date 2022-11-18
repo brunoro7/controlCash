@@ -9,7 +9,7 @@
   <h2><strong>Idéia do Projeto</strong></h2>
  
 Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.com/in/brunoro7/)_.<br>
-É uma **aplicação web fullstack**, **dockerizada**, cujo **objetivo** é **possibilitar que os usuários** cadastrados na plataforma, consigam realizar transferências internas **entre si**.
+É uma **aplicação web fullstack**, **dockerizada**, cujo **objetivo** é **possibilitar que os usuários** cadastrados na plataforma, consigam realizar transferências monetárias, internas, **entre si**.
 
 ---
 </div>
@@ -20,14 +20,14 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
 > Desenvolvido usando: [**PostgreSQL**](https://www.postgresql.org/);
 
 **Back-end:**
-> Desenvolvido usando: [**Node.js**](https://nodejs.org), [**TypeScript**](https://www.typescriptlang.org/), [**Sequelize**](), [**Cors**](https://www.npmjs.com/package/cors), [**Dotenv**](https://www.npmjs.com/package/dotenv), [**Express**](https://www.npmjs.com/package/express) e [**Express-async-errors**](https://www.npmjs.com/package/express-async-errors);
+> Desenvolvido usando: [**Node.js**](https://nodejs.org), [**TypeScript**](https://www.typescriptlang.org/), [**Sequelize**](https://sequelize.org/), [**Sequelize-cli**](https://www.npmjs.com/package/sequelize-cli), [**Cors**](https://www.npmjs.com/package/cors), [**Helmet**](https://www.npmjs.com/package/helmet), [**Pg**](https://www.npmjs.com/package/pg), [**Dotenv**](https://www.npmjs.com/package/dotenv), [**Express**](https://www.npmjs.com/package/express), [**Express-async-errors**](https://www.npmjs.com/package/express-async-errors), [**Ts-node-dev**](https://www.npmjs.com/package/ts-node-dev), [**@types/cors**](https://www.npmjs.com/package/@types/cors), [**@types/express**](https://www.npmjs.com/package/@types/express), [**@types/node**](https://www.npmjs.com/package/@types/node), [**@types/pg**](https://www.npmjs.com/package/@types/pg) e [**@types/sequelize**](https://www.npmjs.com/package/@types/sequelize);
 
 **Front-end:**
 > Desenvolvido usando: [**Css**](https://pt.wikipedia.org/wiki/Cascading_Style_Sheets), [**Html**](https://pt.wikipedia.org/wiki/HTML), [**TypeScript**](), [**React**](https://reactjs.org/), [**React-router-dom**](https://www.npmjs.com/package/react-router-dom),[**Axios**](https://www.npmjs.com/package/axios), [**Dotenv**](https://www.npmjs.com/package/dotenv) e [**Prop-types**](https://www.npmjs.com/package/prop-types);
 
 
 **Testes:**
-> Desenvolvidos usando: [**Chai**](https://www.npmjs.com/package/chai), [**Mocha**](https://mochajs.org/), [**Sinon**](https://sinonjs.org/);
+> Desenvolvidos usando: [**Chai**](https://www.npmjs.com/package/chai), [**Chai-http**](https://www.chaijs.com/plugins/chai-http/), [**Mocha**](https://mochajs.org/), [**Sinon**](https://sinonjs.org/), [**EsLint**](https://eslint.org/), [**EsLint**](https://eslint.org/), [**Eslint-config-airbnb-base**](https://www.npmjs.com/package/eslint-config-airbnb-base), [**Eslint-config-airbnb-typescript**](https://www.npmjs.com/package/eslint-config-airbnb-typescript), [**Eslint-config-standard**](https://www.npmjs.com/package/eslint-config-standard), [**Eslint-plugin-editorconfig**](https://www.npmjs.com/package/eslint-plugin-editorconfig), [**Eslint-plugin-import**](https://www.npmjs.com/package/eslint-plugin-import), [**Eslint-plugin-mocha**](https://www.npmjs.com/package/eslint-plugin-mocha), [**Eslint-plugin-n**](https://www.npmjs.com/package/eslint-plugin-n), [**Eslint-plugin-promise**](https://www.npmjs.com/package/eslint-plugin-promise), [**Eslint-plugin-sonarjs**](https://www.npmjs.com/package/eslint-plugin-sonarjs), [**@types/chai**](https://www.npmjs.com/package/@types/chai), [**@types/mocha**](https://www.npmjs.com/package/@types/mocha), [**@types/sinon**](https://www.npmjs.com/package/@types/sinon), [**@typescript-eslint/eslint-plugin**](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin), [**@typescript-eslint/parser**](https://www.npmjs.com/package/@typescript-eslint/parser) e [**@types/eslint**](https://www.npmjs.com/package/@types/eslint);
 
 ---
 ## **Arquitetura**
@@ -179,7 +179,7 @@ Para cada um dos passos, haverá um exemplo do comando a ser digitado para fazer
 
 <div style="display:inline_block" align="center">
 
-**Adicionar o texto do copyright**
+**Copyright © 2022 Bruno Rossetti**
 
 ---
 </div>
