@@ -6,7 +6,7 @@ const accountController = {
 
   async createNewAccount(_req: Request, res: Response) {
     const newAccount: AccountInterface = await accountServices.createNewAccount();
-    res.status(200).json(newAccount);
+    res.status(201).json(newAccount);
   },
 
   async readAllAccounts(_req: Request, res: Response) {
