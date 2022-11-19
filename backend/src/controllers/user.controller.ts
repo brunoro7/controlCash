@@ -20,8 +20,6 @@ const userController = {
       accountId: newAccount.id,
     };
 
-    console.log(bodyCheckedWithAccount);
-
     const newUser: UserInterface = await userServices.createNewUser(bodyCheckedWithAccount);
 
     res.status(201).json(newUser);

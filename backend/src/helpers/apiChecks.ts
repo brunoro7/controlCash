@@ -1,7 +1,7 @@
 import IdParamsNotValid from '../errors/IdParamsNotValid';
 import InvalidLengthPassword from '../errors/InvalidLengthPassword';
 import InvalidLengthUsername from '../errors/InvalidLengthUsername';
-// import InvalidPasswordType from '../errors/InvalidPasswordType';
+import InvalidPasswordType from '../errors/InvalidPasswordType';
 import UserAlreadyExistsError from '../errors/UserAlreadyExistsError';
 import ReqBodyUserInterface from '../interfaces/ReqBodyUserInterface';
 import userServices from '../services/user.services';
@@ -45,34 +45,21 @@ const apiChecks = {
   async checkPassword(reqBody: ReqBodyUserInterface): Promise<ReqBodyUserInterface> {
     const { password } = reqBody;
     const minLength = 8;
-
     if(!password || password.length < minLength) {
       throw new InvalidLengthPassword(
         'The length of \'password\' must be at least 8 characters long.'
       );
     }
-    // const regexChar = /[azZA]/.test(password);
-    // if(regexChar === false) {
-    //   throw new InvalidPasswordType(
-    //     `The 'password' must be at least 1 character lowercase,
-    //       1 character uppercase and 1 number.`
-    //   );
-    // }
-    // const splitPassword = password.split('');
-    // console.log(splitPassword);
 
-    // const arrayPwdSplited = splitPassword.map((item) => Number(item));
-    // console.log(arrayPwdSplited);
-
-    // const hasNumber = arrayPwdSplited.some((elemento) => typeof elemento === 'number');
-    // console.log(regexChar, hasNumber);
-
-    // if(hasNumber === false) {
-    //   throw new InvalidPasswordType(
-    //     `The 'password' must be at least 1 character lowercase,
-    //       1 character uppercase and 1 number.`
-    //   );
-    // }
+    const regexCharLower = /[a-z]/.test(password);
+    const regexCharUpper = /[A-Z]/.test(password);
+    const regexNumber = /[0-9]/.test(password);
+    const checkRegex = [regexCharLower, regexCharUpper, regexNumber];
+    if(checkRegex.includes(false)) {
+      throw new InvalidPasswordType(
+        'The "password" must be at least 1 character lowercase, 1 character uppercase and 1 number.'
+      );
+    }
 
     return reqBody as ReqBodyUserInterface;
   },
