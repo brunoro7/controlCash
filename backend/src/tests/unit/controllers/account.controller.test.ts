@@ -67,13 +67,45 @@ describe('Tests for account.controller', () => {
     });
 
     it(`2.2- Testing, if accountsController.createNewAccount ok,
-    return object with new account and status 200`, async () => {
+    return object with new account and status 201`, async () => {
 
       sinon.stub(accountServices, 'createNewAccount').resolves(accountMock);
       const response = await chai.request(api).post('/account').send();
 
       chai.expect(response.body).to.be.deep.equal(accountMock);
       chai.expect(response.status).to.be.equal(201);
+    });
+  });
+
+  describe('3- account.controller/readAccountById', () => {
+
+    it(`3.1- Testing, if accountServices.readAccountById fail,
+    accountController throw error;`, async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const req: any = {
+        params: { id: 1 },
+      };
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const res: any = {
+        status: sinon.stub().callsFake(() => res),
+        json: sinon.stub().returns({}),
+      };
+
+      sinon.stub(accountServices, 'readAccountById').resolves(undefined);
+      const response = await accountController.readAccountById(req, res);
+
+      chai.expect(response).to.be.throw;
+
+    });
+
+    it(`3.2- Testing, if accounts.Controller.readAccountById ok,
+    return object with account and status 200`, async () => {
+
+      sinon.stub(accountServices, 'readAccountById').resolves(accountMock);
+      const response = await chai.request(api).get(`/account/${accountMock.id}`).send();
+
+      chai.expect(response.body).to.be.deep.equal(accountMock);
+      chai.expect(response.status).to.be.equal(200);
     });
   });
 
