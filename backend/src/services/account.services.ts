@@ -4,7 +4,7 @@ import DbFailCreate from '../errors/DbFailCreate';
 import DbFailFind from '../errors/DbFailFind';
 import NotFoundError from '../errors/NotFoundError';
 
-const messageDbError = 'Something whrong, try again in few seconds.';
+const messageDbError = 'Something was whrong, try again in few seconds.';
 
 const accountServices = {
 
