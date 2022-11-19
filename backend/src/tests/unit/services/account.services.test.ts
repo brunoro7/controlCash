@@ -33,7 +33,7 @@ describe('Tests for account.services', () => {
       chai.expect(accountServices.createNewAccount()).to.be.throw;
     });
 
-    it(`2.2- Testing, if accountServices.createAccount or in this case if the new Account ok,
+    it(`2.2- Testing, if accountServices.createNewAccount or in this case if the new Account ok,
     return new account;`, async () => {
       const response = new Account({ ...accountMock });
       
