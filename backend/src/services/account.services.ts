@@ -2,6 +2,9 @@ import Account from '../database/models/Account';
 import AccountInterface from '../interfaces/AccountInterface';
 import DbFailCreate from '../errors/DbFailCreate';
 import DbFailFind from '../errors/DbFailFind';
+import NotFoundError from '../errors/NotFoundError';
+
+const messageDbError = 'Something whrong, try again in few seconds.';
 
 const accountServices = {
 
@@ -15,7 +18,7 @@ const accountServices = {
     const newAccount = dataValues;
 
     if(!newAccount) {
-      throw new DbFailCreate('Something whrong, try again in few seconds.');
+      throw new DbFailCreate(messageDbError);
     }
     return newAccount as AccountInterface;
   },
@@ -23,9 +26,19 @@ const accountServices = {
   async readAllAccounts(): Promise<AccountInterface[]> {
     const arrayAccounts = await Account.findAll();
     if(!arrayAccounts) {
-      throw new DbFailFind('Something whrong, try again in few seconds.');
+      throw new DbFailFind(messageDbError);
     }
     return arrayAccounts as AccountInterface[];
+  },
+
+  async readAccountById(accountId: number): Promise<AccountInterface> {
+    const accountById = await Account.findOne(
+      { where: { id: accountId }, raw: true },
+    );
+    if(!accountById) {
+      throw new NotFoundError('Account not find with this \'id\'.');
+    }
+    return accountById as AccountInterface;
   }
 
 };
