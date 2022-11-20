@@ -58,4 +58,21 @@ describe('Tests for user.services', () => {
     });
   });
 
+  describe('4- user.services/readUserByUsername', () => {
+
+    it('4.1- Testing, if User.findOne fail, userServices throw error;', () => {
+      sinon.stub(User, 'findOne').rejects;
+
+      chai.expect(userServices.readUserById(0)).to.be.throw;
+    });
+
+    it(`4.2- Testing, if userServices.readUserByUsername ok,
+    return object with user;`, async () => {
+      sinon.stub(User, 'findOne').resolves(userMock as User);
+      
+
+      chai.expect(await userServices.readUserByUsername('BrunoRo7')).to.be.equal(userMock);
+    });
+  });
+
 });

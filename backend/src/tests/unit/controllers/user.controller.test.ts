@@ -43,6 +43,42 @@ describe('Tests for user.controller', () => {
     });
   });
 
+  describe('2- user.controller/createAccount', () => {
+
+    it(`2.1- Testing, if accountServices.createNewAccount fail,
+    accountController throw error;`, async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const req: any = {
+        params: { id: userMock.id },
+        body: { ...userMock },
+      };
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const res: any = {
+        status: sinon.stub().callsFake(() => res),
+        json: sinon.stub().returns({}),
+      };
+
+      sinon.stub(userServices, 'createNewUser').resolves(undefined);
+      sinon.stub(userServices, 'checkReqBodyUser').resolves(undefined);
+      const response = await userController.createNewUser(req, res);
+
+      chai.expect(response).to.be.throw;
+
+    });
+
+    it(`2.2- Testing, if userController.createNewUser ok,
+    return object with new user and status 201`, async () => {
+
+      sinon.stub(userServices, 'createNewUser').resolves(userMock);
+      sinon.stub(userServices, 'checkReqBodyUser').resolves();
+
+      const response = await chai.request(api).post('/user').send();
+
+      chai.expect(response.body).to.be.deep.equal(userMock);
+      chai.expect(response.status).to.be.equal(201);
+    });
+  });
+
   describe('3- user.controller/readUserById', () => {
 
     it(`3.1- Testing, if userServices.readUserById fail,
