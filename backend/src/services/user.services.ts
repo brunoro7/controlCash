@@ -62,12 +62,12 @@ const userServices = {
     return userById as UserInterface;
   },
 
-  async readUserByUsername(username: string): Promise<unknown> {
-    const userByEmail = await User.findOne(
-      { where: { username }, raw: true },
+  async readUserByUsername(reqUsername: string): Promise<UserInterface> {
+    const userByUsername = await User.findOne(
+      { where: { username: reqUsername }, raw: true },
     );
-    return userByEmail;
-  }
+    return userByUsername as UserInterface;
+  },
 
 };
 
