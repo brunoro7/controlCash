@@ -39,6 +39,21 @@ const accountServices = {
       throw new NotFoundError('Account not find with this \'id\'.');
     }
     return accountById as AccountInterface;
+  },
+
+  async updateAccountBalance(
+    accountId: number, valueToUpdate: number): Promise<boolean> {
+    const accountUpdated = await Account.update({ 
+      balance: valueToUpdate},
+    {where: { id: accountId}});
+
+    console.log(accountUpdated);
+
+    if(!accountUpdated) {
+      throw new NotFoundError('Account not find with this \'id\'.');
+    }
+
+    return true;
   }
 
 };

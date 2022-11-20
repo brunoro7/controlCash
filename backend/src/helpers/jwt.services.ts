@@ -20,7 +20,10 @@ const jwtService = {
   async decodeToken(token: string) {
     try {
       const response = jwt.verify(token, jwtTempSecret);
-      return response;
+      if(typeof response === 'string') {
+        throw new TokenNotFound('This is whrong you are not authorized to be here.');
+      }
+      return response.data;
     } catch (_error) {
       throw new InvalidTokenError('Invalid Token');
     }
