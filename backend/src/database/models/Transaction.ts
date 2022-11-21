@@ -1,6 +1,5 @@
-import { Model, INTEGER, DECIMAL, DATE, DataTypes } from 'sequelize';
+import { Model, INTEGER, DECIMAL, DATE } from 'sequelize';
 import db from '.';
-// import Account from './Account';
 
 class Transaction extends Model {
   id?: number;
@@ -38,8 +37,7 @@ Transaction.init({
   },
   createdAt: {
     allowNull: true,
-    type: DATE,
-    defaultValue: DataTypes.NOW
+    type: DATE
   },
 }, {
   sequelize: db,

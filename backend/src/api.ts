@@ -5,6 +5,7 @@ import helmet from 'helmet';
 
 import expressAsyncErrors from './middlewares/expressAsyncErrors';
 
+import loginRoute from './routes/login.route';
 import accountRoute from './routes/account.route';
 import transactionRoute from './routes/transaction.route';
 import userRoute from './routes/user.route';
@@ -16,6 +17,7 @@ api.use(express.json());
 api.use(cors());
 api.use(helmet());
 
+api.use('/login', loginRoute);
 api.use('/account', accountRoute);
 api.use('/transaction', transactionRoute);
 api.use('/user', userRoute);

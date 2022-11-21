@@ -23,8 +23,7 @@ module.exports = {
       },
       createdAt: {
         allowNull: true,
-        type: Sequelize.DATE,
-        defaultValue: Sequelize.DataTypes.NOW
+        type: Sequelize.DATE
       },
     });
   },
