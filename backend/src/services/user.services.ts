@@ -6,6 +6,7 @@ import DbFailCreate from '../errors/DbFailCreate';
 import ReqBodyUserInterface from '../interfaces/ReqBodyUserInterface';
 import apiChecks from '../helpers/apiChecks';
 import ApiChecksFail from '../errors/ApiChecksFail';
+import UserAlreadyExistsError from '../errors/UserAlreadyExistsError';
 
 const messageDbError = 'Something was whrong, try again in few seconds.';
 
@@ -66,7 +67,22 @@ const userServices = {
     const userByUsername = await User.findOne(
       { where: { username: reqUsername }, raw: true },
     );
+    if(!userByUsername) {
+      throw new NotFoundError('User not find with this \'id\'.');
+    }
     return userByUsername as UserInterface;
+  },
+
+  async readUserByUsernameToRegister(reqUsername: string): Promise<boolean | void> {
+    
+    const response = await User.findOne(
+      { where: { username: reqUsername }, raw: true },
+    );
+    if(response !== null) {
+      console.log('ESTOU AQUI');
+      throw new UserAlreadyExistsError('User alredy exists with this \'username\'.');
+    }
+    return true;
   },
 
 };
