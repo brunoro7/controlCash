@@ -2,16 +2,51 @@ version: '3.1'
 
 services:
 
+  # backend:
+  #     container_name: control-cash_api
+  #     build: ./backend
+  #     command: npm run dev
+  #     working_dir: /backend/
+  #     volumes:
+  #       - ./backend:/backend
+  #     platform: linux/x86_64
+  #     depends_on:
+  #       db:
+  #         condition: service_healthy
+  #     # environment:
+  #       # - DB_HOST=localhost
+  #       # - DB_PORT=8081
+  #       # - POSTGRES_USER=controlCashAdm
+  #       # - POSTGRES_PASSWORD=example
+  #       # - POSTGRES_DB=db_controlCash
+  #       # - BACKEND_PORT=3007
+  #       # - JWT_SECRET=cash0777
+  #     ports:
+  #       - 3007:3007
+  #     # healthcheck:
+  #     # test: ["CMD", "lsof", "-t", "-i:3001"]
+  #     # timeout: 10s
+  #     # retries: 5
+
   db:
     image: postgres
     container_name: db_postgres
-    restart: always
     environment:
+      DB_HOST: localhost
       POSTGRES_USER: controlCashAdm
       POSTGRES_PASSWORD: example
       POSTGRES_DB: db_controlCash
+      BACKEND_PORT: 3007
+      JWT_SECRET: cash0777
     ports:
       - 8081:5432
+    restart: 'always'
+    healthcheck:
+      test: ["CMD-SHELL", 'pg_isready']
+      timeout: 10s
+      retries: 5
+    cap_add:
+      - SYS_NICE
 
   adminer:
     image: adminer
