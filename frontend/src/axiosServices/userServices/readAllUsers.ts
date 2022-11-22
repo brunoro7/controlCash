@@ -1,8 +1,5 @@
 import axios from 'axios';
 
-import 'dotenv/config';
-
-
 const host = process.env.REACT_APP_HOSTNAME || 'localhost';
 const port = process.env.REACT_APP_BACKEND_PORT || 3007;
 
