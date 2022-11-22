@@ -108,11 +108,11 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
 - [X] **1.** Página para realizar o cadastro informando **"username"** e **"password"**.
 - [X] **2.** Página para realizar o login informando **"username"** e **"password"**.
 - [X] **3.** Com o **usuário logado**, a **Página Principal** deve apresentar:
-  - [ ] **-** Balance atual (Saldo em conta) do usuário;
-  - [ ] **-** Seção voltada à realização de transferências para outros usuários, a partir do username de quem sofrerá o cash-in;
-  - [ ] **-** Tabela com os detalhes de todas as transações que o usuário participou;
+  - [X] **-** Balance atual (Saldo em conta) do usuário;
+  - [X] **-** Seção voltada à realização de transferências para outros usuários, a partir do username de quem sofrerá o cash-in;
+  - [X] **-** Tabela com os detalhes de todas as transações que o usuário participou;
   - [ ] **-** Mecanismo para filtrar a tabela por data de transação e/ou transações do tipo cash-in/cash-out;
-  - [ ] **-** Botão para realizar o log-out;
+  - [X] **-** Botão para realizar o log-out;
 
 </details>
 
@@ -123,11 +123,11 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
 
 **Página de Login**  |  **Página de Cadastro**    
 :-------------------------:|:-------------------------:
-![Screeshot]()  |  ![Screeshot]()
+![Screeshot](./layoutLogin.png)  |  ![Screeshot](layoutRegister.png)
 
 **Página Principal (Logado)**  |  **Developed by**    
 :-------------------------:|:-------------------------:
-![Screeshot]()  |  **BrunoRo7**
+![Screeshot](./layoutHomeLogged.png)  |  **BrunoRo7**
 
 ---
 </div>
@@ -138,6 +138,13 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
 
 > ### **Precisa ter instalado em sua máquina o 'docker-compose'**
 > Link de sugestão para fazer instalação, caso aconteça mais algum erro, por favor, entre em contato por uma das vias disponíveis nessa documentação.
+>
+> ==> https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04-pt
+
+> ### **Precisa ter instalado em sua máquina também o '**node**'**
+> Link de sugestão para fazer instalação, caso aconteça mais algum erro, por favor, entre em contato por uma das vias disponíveis nessa documentação.
+>
+> ==> https://nodejs.org/pt-br/download/
 
 </div>
 
