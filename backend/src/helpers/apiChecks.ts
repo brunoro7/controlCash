@@ -2,7 +2,6 @@ import IdParamsNotValid from '../errors/IdParamsNotValid';
 import InvalidLengthPassword from '../errors/InvalidLengthPassword';
 import InvalidLengthUsername from '../errors/InvalidLengthUsername';
 import InvalidPasswordType from '../errors/InvalidPasswordType';
-import UserAlreadyExistsError from '../errors/UserAlreadyExistsError';
 import ReqBodyUserInterface from '../interfaces/ReqBodyUserInterface';
 import userServices from '../services/user.services';
 
@@ -32,13 +31,8 @@ const apiChecks = {
 
   async checkUsernameUnique(reqBody: ReqBodyUserInterface): Promise<ReqBodyUserInterface> {
     const { username } = reqBody;
-    const userAlreadyExists = await userServices.readUserByUsername(username);
+    await userServices.readUserByUsernameToRegister(username);
 
-    if(userAlreadyExists) {
-      throw new UserAlreadyExistsError(
-        'This \'username\' already exists.'
-      );
-    }
     return reqBody as ReqBodyUserInterface;
   },
 

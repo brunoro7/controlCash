@@ -1,0 +1,57 @@
+.box-contentFooter {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #191919f2;
+  border-top: solid 0.7px #38B6FF;
+  box-shadow: 0 1px 7px 0 rgba(64, 178, 206, 0.579), 0 1.5px 5px 1px rgba(52, 143, 213, 0.579);
+  height: 7vh;
+}
+
+.box-footerIcons {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-evenly;
+  width: 15%;
+}
+
+.img-icon {
+  cursor: pointer;
+  border-radius: 15%;
+  opacity: 0.4;
+  transition: all 700ms;
+  margin-top: 8.5px;
+  height: 23px;
+  width: 23px;
+}
+
+.img-icon:hover {
+  opacity: 0.9;
+}
+
+.gitHub {
+  background-color: rgba(245, 245, 245, 0.7);
+  border-radius: 30%;
+  height: 22px;
+  width: 22px;
+}
+
+/* .linkedin {} */
+
+/* .stackoverflow {} */
+
+.div-footerCopyright {
+  align-content: center;
+  display: flex;
+  height: 2vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.img-footerCopyright {
+  height: 100%;
+  object-fit: cover;
+  flex-basis: 17%;
+  opacity: 0.75;
+}

@@ -23,8 +23,7 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
 > Desenvolvido usando: [**Node.js**](https://nodejs.org), [**TypeScript**](https://www.typescriptlang.org/), [**Sequelize**](https://sequelize.org/), [**Sequelize-cli**](https://www.npmjs.com/package/sequelize-cli), [**Cors**](https://www.npmjs.com/package/cors), [**Helmet**](https://www.npmjs.com/package/helmet), [**Pg**](https://www.npmjs.com/package/pg), [**Dotenv**](https://www.npmjs.com/package/dotenv), [**Express**](https://www.npmjs.com/package/express), [**Express-async-errors**](https://www.npmjs.com/package/express-async-errors), [**Ts-node-dev**](https://www.npmjs.com/package/ts-node-dev), [**@types/cors**](https://www.npmjs.com/package/@types/cors), [**@types/express**](https://www.npmjs.com/package/@types/express), [**@types/node**](https://www.npmjs.com/package/@types/node), [**@types/pg**](https://www.npmjs.com/package/@types/pg), [**@types/sequelize**](https://www.npmjs.com/package/@types/sequelize), [**@types/bcrypt**](https://www.npmjs.com/package/@types/bcrypt), [**@types/jsonwebtoken**](https://www.npmjs.com/package/@types/jsonwebtoken), [**Bcrypt**](https://www.npmjs.com/package/bcrypt) e [**Jsonwebtoken**](https://www.npmjs.com/package/jsonwebtoken);
 
 **Front-end:**
-> Desenvolvido usando: [**Css**](https://pt.wikipedia.org/wiki/Cascading_Style_Sheets), [**Html**](https://pt.wikipedia.org/wiki/HTML), [**TypeScript**](), [**React**](https://reactjs.org/), [**React-router-dom**](https://www.npmjs.com/package/react-router-dom),[**Axios**](https://www.npmjs.com/package/axios), [**Dotenv**](https://www.npmjs.com/package/dotenv) e [**Prop-types**](https://www.npmjs.com/package/prop-types);
-
+> Desenvolvido usando: [**Css**](https://pt.wikipedia.org/wiki/Cascading_Style_Sheets), [**Html**](https://pt.wikipedia.org/wiki/HTML), [**TypeScript**](), [**React**](https://reactjs.org/), [**React-router-dom**](https://www.npmjs.com/package/react-router-dom),[**Axios**](https://www.npmjs.com/package/axios), [**Dotenv**](https://www.npmjs.com/package/dotenv), [**@types/node**](https://www.npmjs.com/package/@types/node), [**@types/react**](https://www.npmjs.com/package/@types/react), [**@types/react-dom**](https://www.npmjs.com/package/@types/react-dom), [**axios**](https://www.npmjs.com/package/axios), [**Dotenv**](https://www.npmjs.com/package/dotenv), [**react-router-dom**](https://www.npmjs.com/package/react-router-dom) e [**@types/react-router-dom**](https://www.npmjs.com/package/@types/react-router-dom);
 
 **Testes:**
 > Desenvolvidos usando: [**Chai**](https://www.npmjs.com/package/chai), [**Chai-http**](https://www.chaijs.com/plugins/chai-http/), [**Mocha**](https://mochajs.org/), [**Sinon**](https://sinonjs.org/), [**EsLint**](https://eslint.org/), [**EsLint**](https://eslint.org/), [**Eslint-config-airbnb-base**](https://www.npmjs.com/package/eslint-config-airbnb-base), [**Eslint-config-airbnb-typescript**](https://www.npmjs.com/package/eslint-config-airbnb-typescript), [**Eslint-config-standard**](https://www.npmjs.com/package/eslint-config-standard), [**Eslint-plugin-editorconfig**](https://www.npmjs.com/package/eslint-plugin-editorconfig), [**Eslint-plugin-import**](https://www.npmjs.com/package/eslint-plugin-import), [**Eslint-plugin-mocha**](https://www.npmjs.com/package/eslint-plugin-mocha), [**Eslint-plugin-n**](https://www.npmjs.com/package/eslint-plugin-n), [**Eslint-plugin-promise**](https://www.npmjs.com/package/eslint-plugin-promise), [**Eslint-plugin-sonarjs**](https://www.npmjs.com/package/eslint-plugin-sonarjs), [**@types/chai**](https://www.npmjs.com/package/@types/chai), [**@types/mocha**](https://www.npmjs.com/package/@types/mocha), [**@types/sinon**](https://www.npmjs.com/package/@types/sinon), [**@typescript-eslint/eslint-plugin**](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin), [**@typescript-eslint/parser**](https://www.npmjs.com/package/@typescript-eslint/parser) e [**@types/eslint**](https://www.npmjs.com/package/@types/eslint);
@@ -92,7 +91,7 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
 - [X] **7.** Todo **usuário logado** (ou seja, que apresente um token válido) deverá ser capaz de realizar um **cash-out** informando o **"username" do usuário** que sofrerá o **cash-in**, caso apresente **balance suficiente** para isso. Atente-se ao fato de que um usuário não deverá ter a possibilidade de realizar uma transferência para si mesmo.
 - [X] **8.** Toda nova **transação bem-sucedida** deverá ser registrada na **tabela Transactions**. Em **casos de falhas** transacionais, a **tabela Transactions não deverá ser afetada**.
 - [X] **9.** Todo **usuário logado** (ou seja, que apresente um token válido) deverá ser capaz de **visualizar as transações financeiras (cash-out e cash-in) que participou**. Caso o usuário não tenha participado de uma determinada transação, ele nunca poderá ter acesso à ela.
-- [ ] **10.** Todo **usuário logado** (ou seja, que apresente um token válido) deverá ser capaz de **filtrar as transações** financeiras que participou por:
+- *[X] **10.** Todo **usuário logado** (ou seja, que apresente um token válido) deverá ser capaz de **filtrar as transações** financeiras que participou por:
   - [ ] **-** **Data de realização** da transação;
   - [X] **-** Transações de **cash-out**;
   - [X] **-** Transações de **cash-in**;
@@ -106,14 +105,14 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
 ## **Regras de Negócio Front-End:**
 </summary>
 
-- [ ] **1.** Página para realizar o cadastro informando **"username"** e **"password"**.
-- [ ] **2.** Página para realizar o login informando **"username"** e **"password"**.
-- [ ] **3.** Com o **usuário logado**, a **Página Principal** deve apresentar:
-  - [ ] **-** Balance atual (Saldo em conta) do usuário;
-  - [ ] **-** Seção voltada à realização de transferências para outros usuários, a partir do username de quem sofrerá o cash-in;
-  - [ ] **-** Tabela com os detalhes de todas as transações que o usuário participou;
+- [X] **1.** Página para realizar o cadastro informando **"username"** e **"password"**.
+- [X] **2.** Página para realizar o login informando **"username"** e **"password"**.
+- [X] **3.** Com o **usuário logado**, a **Página Principal** deve apresentar:
+  - [X] **-** Balance atual (Saldo em conta) do usuário;
+  - [X] **-** Seção voltada à realização de transferências para outros usuários, a partir do username de quem sofrerá o cash-in;
+  - [X] **-** Tabela com os detalhes de todas as transações que o usuário participou;
   - [ ] **-** Mecanismo para filtrar a tabela por data de transação e/ou transações do tipo cash-in/cash-out;
-  - [ ] **-** Botão para realizar o log-out;
+  - [X] **-** Botão para realizar o log-out;
 
 </details>
 
@@ -124,58 +123,129 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
 
 **Página de Login**  |  **Página de Cadastro**    
 :-------------------------:|:-------------------------:
-![Screeshot]()  |  ![Screeshot]()
+![Screeshot](./layoutLogin.png)  |  ![Screeshot](layoutRegister.png)
 
-**Página Principal (Logado)**  |  **By BrunoRo7**    
+**Página Principal (Logado)**  |  **Developed by**    
 :-------------------------:|:-------------------------:
-![Screeshot]()  |  ![Screeshot]()
-<!-- https://avatars.githubusercontent.com/u/80050586?v=4 -->
+![Screeshot](./layoutHomeLogged.png)  |  **BrunoRo7**
 
 ---
 </div>
 
-## **Instalação do projeto localmente:**
+<div style="display:inline_block" align="center">
+
+## **Observações mínimas para rodar o projeto:**
+
+> ### **Precisa ter instalado em sua máquina o 'docker-compose'**
+> Link de sugestão para fazer instalação, caso aconteça mais algum erro, por favor, entre em contato por uma das vias disponíveis nessa documentação.
+>
+> ==> https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04-pt
+
+> ### **Precisa ter instalado em sua máquina também o '**node**'**
+> Link de sugestão para fazer instalação, caso aconteça mais algum erro, por favor, entre em contato por uma das vias disponíveis nessa documentação.
+>
+> ==> https://nodejs.org/pt-br/download/
+
+</div>
+
+---
+## **Utilização do projeto:**
  
 Para cada um dos passos, haverá um exemplo do comando a ser digitado para fazer o que está sendo pedido, caso tenha dificuldades e o exemplo não seja suficiente, sinta-se a vontade para me contatar em _[Bruno-Ro7 StackOverFlow](https://stackoverflow.com/users/20140542/bruno-rossetti)_.
 
-1. Abra o terminal (também pode usar o atalho de teclado "**ctrl+alt+t**") e crie um diretório no local de sua preferência com o comando **mkdir**, aqui neste exemplo usaremos o nome "**projetos**":
+**1.** Abra o terminal (também pode usar o atalho de teclado "**ctrl+alt+t**") e crie um diretório no local de sua preferência com o comando **mkdir**, aqui neste exemplo usaremos o nome "**projetos**":
 ```javascript
   mkdir projetos
 ```
 > **obs**: lembrando que o nome **'projetos'**, que demos para o diretório, também poderia ser qualquer outro nome;
 
-2. Entre no diretório que acabou de criar:
+**2.** Entre no diretório que acabou de criar:
 ```javascript
   cd projetos
 ```
 
-3. Faça o clone o projeto:
+**3.** Faça o clone o projeto:
 ```javascript
-  git clone "link do ssh do projeto"
+  git clone git@github.com:brunoro7/controlCash.git
 ```
 > **Obs: esse comando irá criar um novo diretório, já contendo toda a sua aplicação!**
 
-4. Entre no diretório '**nome-do-diretório**', usando o comando abaixo:
+**4.** Entre no diretório '**controlCash**', usando o comando abaixo:
 ```javascript
-  cd "destino do diretório"
+  cd controlCash
 ```
 
-5. Rode as instalações, específicas do frontend:
+**5.** Rode o comando do docker compose para rodar sua aplicação:
 ```javascript
-  npm install
+  docker-compose up -d --build
 ```
 
-6. Inicie a aplicação:
+**6.** Entre no diretório '**backend**', usando o comando abaixo:
 ```javascript
-  npm start
+  cd backend
 ```
 
+**7.** Rode o comando para fazer a criação do banco de dados:
+```javascript
+  npm run db:create
+```
+
+---
 <div style="display:inline_block" align="center">
 
-### **Esse último script irá abrir o browser do seu navegador com o projeto rodando!**
+### **Ao finalizar esse último (executar o script), seu aplicativo já estará funcionando no browser do seu navegador com o projeto rodando!**
+> ## "Endereço" ==>  **http://localhost:3000/**
 
 ---
 </div>
+
+<details>
+<summary>
+
+### **Caso queira utilizar o projeto através do '.zip' :**
+</summary>
+
+### **Utilização do projeto:**
+
+**1.** Faça o **download do .zip** do projeto no diretório de sua escolha, usando o botão '**Code**', mostrado na imagem:
+
+  ![Screeshot](./imgRefBtbCodeToDownloadZip.jpeg)
+
+**2.** Descompactar o **.zip** com a ferramenta de sua preferência, e acessar o diretório criado:
+> **Obs: essa "pasta"/"diretório" irá conter as configurações da sua aplicação como um todo, restando apenas rodar o aplicativo e iniciar o banco de dados!**
+
+Entre na "pasta"/"diretório", que foi extraída, com nome '**controlCash**'. 
+
+**3.** Abra o terminal na raíz da aplicação, que é a "pasta"/"diretório" '**controlCash**':
+> Você pode fazer isso usando o botão direito do mouse e clicando em abrir "pasta"/"diretório" no terminal.
+
+**4.** Rode o comando do docker compose para rodar sua aplicação:
+```javascript
+  docker-compose up -d --build
+```
+
+**5.** Entre no diretório '**backend**', usando o comando abaixo:
+```javascript
+  cd backend
+```
+
+**6.** Rode o comando para fazer a criação do banco de dados:
+```javascript
+  npm run db:create
+```
+
+---
+<div style="display:inline_block" align="center">
+
+### **Ao finalizar esse último passo (executar o script), seu aplicativo já estará funcionando no browser do seu navegador com o projeto rodando!**
+> ## "Endereço" ==>  **http://localhost:3000/**
+
+---
+</div>
+
+</details>
+
+---
 
 <div style="display:inline_block" align="center">
 

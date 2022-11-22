@@ -6,7 +6,10 @@ import jwtServices from '../helpers/jwt.services';
 const loginController = {
   async post(req: Request, res: Response) {
     const { username } = req.body;
-    const { id, ...user } = await usersService.readUserByUsername(username);
+    const data = await usersService.readUserByUsername(username);
+
+    const user = {...data};
+    const id = data.id;
 
     await loginServices.checkPassword(req.body.password, user.password);
 

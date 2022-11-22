@@ -2,7 +2,7 @@ interface ReqBodyTransactionInterface {
   debitedAccountId: number
   creditedAccountId: number
   value: number
-  createdAt: string
+  createdAt: Date
 }
 
 export default ReqBodyTransactionInterface;

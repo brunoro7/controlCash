@@ -1,0 +1,13 @@
+.box-spanErrorLogin {
+  align-items: center;
+  border: 1px dotted rgba(250, 95, 95, 0.7);
+  border-radius: 5px;
+  color: rgba(250, 95, 95, 0.7);
+  display: flex;
+  font-size: 13px;
+  font-weight: 500;
+  height: 35px;
+  justify-content: center;
+  margin: 0 0 10px;
+  width: 200px;
+}

@@ -8,7 +8,7 @@ const config: Options = {
   password: POSTGRES_PASSWORD || 'example',
   database: POSTGRES_DB || 'database_default',
   host: DB_HOST || 'localhost',
-  port: Number(DB_PORT) || 8080,
+  port: Number(DB_PORT) || 8081,
   dialect: 'postgres',
 };
 

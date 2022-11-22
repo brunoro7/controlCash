@@ -45,7 +45,7 @@ const accountServices = {
     accountId: number, valueToUpdate: number): Promise<boolean> {
     const accountUpdated = await Account.update({ 
       balance: valueToUpdate},
-    {where: { id: accountId}});
+    {where: { id: accountId }});
 
     console.log(accountUpdated);
 

@@ -1,0 +1,7 @@
+.box-cardTransferContent {
+  align-items: center;
+  border: 1px dotted rgba(250, 95, 95, 0.7);
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 15px;
+}
