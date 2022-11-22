@@ -170,22 +170,47 @@ Para cada um dos passos, haverá um exemplo do comando a ser digitado para fazer
 ```
 > **Obs: esse comando irá criar um novo diretório, já contendo toda a sua aplicação!**
 
-**4.** Entre no diretório '**controlCash**', usando o comando abaixo:
+**4.** Entre no diretório '**controlCash/backend**', usando o comando abaixo:
 ```javascript
-  cd controlCash
+  cd controlCash/backend
 ```
 
-**5.** Rode o comando do docker compose para rodar sua aplicação:
+**5.** Rode o comando abaixo:
+```javascript
+  npm install
+```
+
+**6.** Volte para no diretório '**controlCash**', usando o comando abaixo:
+```javascript
+  cd ..
+```
+
+**7.** Vá para o diretório '**frontend**', usando o comando abaixo:
+```javascript
+  cd frontend
+```
+
+**8.** Rode o comando abaixo:
+```javascript
+  npm install
+```
+
+**9.** Volte para no diretório '**controlCash**', usando o comando abaixo:
+```javascript
+  cd ..
+```
+
+**10.** Rode o comando do docker compose para rodar sua aplicação:
 ```javascript
   docker-compose up -d --build
 ```
 
-**6.** Entre no diretório '**backend**', usando o comando abaixo:
+**11.** Entre no diretório '**backend**', usando o comando abaixo:
 ```javascript
   cd backend
 ```
 
-**7.** Rode o comando para fazer a criação do banco de dados:
+**12.** Rode o comando para fazer a criação do banco de dados:
 ```javascript
   npm run db:create
 ```
@@ -219,17 +244,47 @@ Entre na "pasta"/"diretório", que foi extraída, com nome '**controlCash**'.
 **3.** Abra o terminal na raíz da aplicação, que é a "pasta"/"diretório" '**controlCash**':
 > Você pode fazer isso usando o botão direito do mouse e clicando em abrir "pasta"/"diretório" no terminal.
 
-**4.** Rode o comando do docker compose para rodar sua aplicação:
+**4.** Entre no diretório '**controlCash/backend**', usando o comando abaixo:
+```javascript
+  cd /backend
+```
+
+**5.** Rode o comando abaixo:
+```javascript
+  npm install
+```
+
+**6.** Volte para no diretório '**controlCash**', usando o comando abaixo:
+```javascript
+  cd ..
+```
+
+**7.** Vá para o diretório '**frontend**', usando o comando abaixo:
+```javascript
+  cd frontend
+```
+
+**8.** Rode o comando abaixo:
+```javascript
+  npm install
+```
+
+**9.** Volte para no diretório '**controlCash**', usando o comando abaixo:
+```javascript
+  cd ..
+```
+
+**10.** Rode o comando do docker compose para rodar sua aplicação:
 ```javascript
   docker-compose up -d --build
 ```
 
-**5.** Entre no diretório '**backend**', usando o comando abaixo:
+**11.** Entre no diretório '**backend**', usando o comando abaixo:
 ```javascript
   cd backend
 ```
 
-**6.** Rode o comando para fazer a criação do banco de dados:
+**12.** Rode o comando para fazer a criação do banco de dados:
 ```javascript
   npm run db:create
 ```
