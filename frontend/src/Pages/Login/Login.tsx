@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import readAllUsers from '../../axiosServices/userServices/readAllUsers';
 import BoxFooter from '../../Components/general/BoxFooter/BoxFooter';
+import BoxMainLogin from '../../Components/login/BoxMainLogin/BoxMainLogin';
 import './style/Login.css';
 
 function Login() {
@@ -14,7 +15,6 @@ function Login() {
     };
     apiCall();
   }, [])
-
   console.log('API RESPONSE', usersList);
 
   return (
@@ -26,7 +26,7 @@ function Login() {
 
       <main className="box-mainLogin">
         <section>
-          main login
+          <BoxMainLogin />
         </section>
       </main>
 
