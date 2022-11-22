@@ -79,7 +79,6 @@ const userServices = {
       { where: { username: reqUsername }, raw: true },
     );
     if(response !== null) {
-      console.log('ESTOU AQUI');
       throw new UserAlreadyExistsError('User alredy exists with this \'username\'.');
     }
     return true;

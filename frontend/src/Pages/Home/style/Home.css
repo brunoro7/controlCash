@@ -1,0 +1,30 @@
+.body-Home {
+  display: flex;
+  flex-direction: column;
+  height: 99vh;
+  width: 99vw;
+}
+
+.box-bodyHeaderHome {
+  position: fixed;
+  top: 0;
+  /* height: 10vh; */
+  width: 100%;
+}
+
+.box-mainHome {
+  align-items: center;
+  align-self: center;
+  /* background-color: #013852c5; */
+  background-color: #3c4143c5;
+  display: flex;
+  flex-direction: column;
+  width: 99.1vw;
+  margin-top: 11.4vh;
+}
+
+.box-bodyFooterHome {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

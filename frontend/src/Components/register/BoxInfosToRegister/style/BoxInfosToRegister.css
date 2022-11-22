@@ -1,0 +1,19 @@
+.box-infosRegister {
+  background-color: rgba(64, 178, 206, 0.13);
+  border: solid 1px #013852;
+  box-shadow: 0 0.5px 5px 0 rgba(64, 178, 206, 0.3), 0 1px 2.5px 0.5px rgba(64, 178, 206, 0.2);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+  width: 50%;
+}
+
+.ul-infosRegister {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14.5px;
+  margin: 7px 0;
+}
