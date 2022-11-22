@@ -8,10 +8,13 @@ transactionRouter.post('/', validateToken, transactionController.createNewTransa
 
 transactionRouter.get('/:id',
   validateToken, transactionController.readTransactionsByUserId);
+
 transactionRouter.get('/:id/cashout',
   validateToken, transactionController.readTransactionsCashOutByUserId);
+
 transactionRouter.get('/:id/cashin',
   validateToken, transactionController.readTransactionsCashInByUserId);
+
 transactionRouter.get('/:id/date',
   validateToken, transactionController.readTransactionsDateByUserId);
 

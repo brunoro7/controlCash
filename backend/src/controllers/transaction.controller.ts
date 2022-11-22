@@ -17,27 +17,26 @@ const transactionsController = {
 
   async createNewTransaction(req: Request, res: Response) {
     const usernameToCashIn = req.body.username;
-    const valueTransaction = req.body.value;
+    const valueTransaction = req.body.transferValue;
+
+    console.log('ENTROU NO BACK', valueTransaction);
 
     const userToCashOut = await jwtService.decodeToken(String(req.headers.authorization));
     const userToCredited: UserInterface = await userServices.readUserByUsername(usernameToCashIn);
-    
-    const todayDate = new Date();
+
+    const today = new Date();
     const objToNewTransaction = {
       debitedAccountId: userToCashOut.accountId,
       creditedAccountId: userToCredited.accountId,
-      value: valueTransaction,
-      createdAt: String(
-        new Intl.DateTimeFormat(
-          'pt-BR', { dateStyle: 'full', timeStyle: 'long' }).format(todayDate)),
+      value: Number(valueTransaction),
+      createdAt: today,
     };
 
-    const transferActionVerif = await transactionServices.transferAction(
+    await transactionServices.transferAction(
       valueTransaction,
       objToNewTransaction.debitedAccountId,
       objToNewTransaction.creditedAccountId,
     );
-    console.log('MEU PRINT', transferActionVerif);
 
     const createNewTransaction = await transactionServices
       .createNewTransaction(objToNewTransaction);
