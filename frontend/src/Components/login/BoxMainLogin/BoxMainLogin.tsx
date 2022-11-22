@@ -10,8 +10,8 @@ import setUserLocalStorage from '../../../helpers/setUserLocalStorage';
 
 import './style/BoxMainLogin.css';
 
-import readAllUsers from '../../../axiosServices/userServices/readAllUsers';
 import login from '../../../axiosServices/userServices/login';
+import getDataFromLocalStorage from '../../../helpers/getDataFromLocalStorage';
 
 function BoxMainLogin() {
   const [isLoginEnabled, setIsLoginEnabled] = useState(false);
@@ -22,7 +22,19 @@ function BoxMainLogin() {
   const [isErrorLoginEnabled, setIsErrorLoginEnabled] = useState(false);
   const navigate = useNavigate();
 
+  
+
   useEffect(() => {
+    const user = getDataFromLocalStorage('user');
+
+    if (user) {
+      switch (user) {
+      default:
+        navigate('/home');
+        break;
+      }
+    }
+
     const validateLogin = () => {
       const MIN_USERNAME_LENGTH = 3;
       const isUsernameValid = loginInput.username.length >= MIN_USERNAME_LENGTH;

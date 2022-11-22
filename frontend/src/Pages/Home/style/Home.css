@@ -1,4 +1,5 @@
 .body-Home {
+  align-items: center;
   display: flex;
   flex-direction: column;
   height: 99vh;
@@ -6,25 +7,36 @@
 }
 
 .box-bodyHeaderHome {
+  align-items: center;
+  background-color: #191919f2;
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
-  /* height: 10vh; */
   width: 100%;
+  height: 10vh;
+  justify-content: center;
+  font-weight: 700;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 15px;
 }
 
 .box-mainHome {
   align-items: center;
   align-self: center;
-  /* background-color: #013852c5; */
-  background-color: #3c4143c5;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 99.1vw;
-  margin-top: 11.4vh;
+  margin-top: 15vh;
+  margin-bottom: 6vh;
+  justify-content: space-evenly;
+  overflow-y:scroll;
 }
 
 .box-bodyFooterHome {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 101vw;
 }
