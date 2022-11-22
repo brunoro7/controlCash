@@ -50,6 +50,7 @@ function BoxMainRegister() {
 
   const handleBtnRegister = async () => {
     const response = await createNewUser(registerInput);
+    console.log(response)
 
     const OK_RESPONSE_STATUS = 201;
 
