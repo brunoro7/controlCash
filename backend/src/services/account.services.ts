@@ -13,10 +13,8 @@ const accountServices = {
     const accountObj = {
       balance: defaultValue,
     };
-
     const { dataValues } = await Account.create(accountObj);
     const newAccount = dataValues;
-
     if(!newAccount) {
       throw new DbFailCreate(messageDbError);
     }
@@ -46,13 +44,9 @@ const accountServices = {
     const accountUpdated = await Account.update({ 
       balance: valueToUpdate},
     {where: { id: accountId }});
-
-    console.log(accountUpdated);
-
     if(!accountUpdated) {
       throw new NotFoundError('Account not find with this \'id\'.');
     }
-
     return true;
   }
 

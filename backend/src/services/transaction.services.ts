@@ -32,7 +32,6 @@ const transactionServices = {
     debitedAccountId: number,
     creditedAccountId: number,
   ): Promise<object> {
-
     if(debitedAccountId === creditedAccountId) {
       throw new AccountTranferDuplicate(
         'The destination of the \'credit account\' must be different from the \'debit account\'.');
@@ -42,18 +41,10 @@ const transactionServices = {
     if(Number(debitedAccount.balance) < valueTransaction) {
       throw new AccountInsufficientBalance('Insufficient \'balance\' to perform a transaction.');
     }
-    // console.log('TO DEBITED', Number(debitedAccount.balance));
-    // console.log('TO DEBITED', Number(creditedAccount.balance));
-    // console.log('VALUE', Number(valueTransaction));
-
-    console.log('TESTE', Number(creditedAccount.balance) - 1003718);
-
     const valueToUpdateDebited = Number(debitedAccount.balance) - Number(valueTransaction);
     const valueToUpdateCredited = Number(creditedAccount.balance) + Number(valueTransaction);
-
     await accountServices.updateAccountBalance(debitedAccountId, valueToUpdateDebited);
     await accountServices.updateAccountBalance(creditedAccountId, valueToUpdateCredited);
-
     return { transferSuccess: true };
   },
 

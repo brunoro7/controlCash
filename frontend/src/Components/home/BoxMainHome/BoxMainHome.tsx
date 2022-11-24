@@ -52,13 +52,10 @@ function BoxMainHome() {
 
   const handleBtnTranfer = async () => {
     const userStorage = getDataFromLocalStorage('user');
-
     const response = await createNewTransaction(transferInput, userStorage.token);
 
     const OK_RESPONSE_STATUS = 201;
-
     if (response.status !== OK_RESPONSE_STATUS) {
-
       setIsErrorTransferEnabled(true);
       return;
     }

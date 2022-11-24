@@ -5,10 +5,10 @@ function BoxInfosToRegister() {
     <div className="box-infosRegister">
       <ul className="ul-infosRegister">
         <li>
-          O 'username' deve conter obrigatóriamente pelo menos 3 letras.
+          O 'username' deverá conter obrigatoriamente pelo menos 3 carácteres.
         </li>
         <li>
-          <div>O 'password' deve conter obrigatóriamente:</div>
+          <div>O 'password' deverá conter:</div>
           <div>
             <ul>
               <li>Pelo menos um carácter maiúsculo.</li>
