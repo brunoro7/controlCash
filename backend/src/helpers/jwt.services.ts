@@ -8,12 +8,10 @@ const jwtTempSecret = process.env.JWT_SECRET || '123456';
 const jwtService = {
   async createToken(user: UserInterface) {
     const { password: _, ...userNoPass } = user;
-
     const token = jwt.sign({ data: user }, jwtTempSecret, {
       expiresIn: '1d',
       algorithm: 'HS256',
     });
-
     return { userNoPass, token };
   },
 

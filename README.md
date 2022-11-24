@@ -6,7 +6,7 @@
 
 <div style="display:inline_block" align="center">
   
-  <h2><strong>Idéia do Projeto</strong></h2>
+  <h2><strong>Ideia do Projeto</strong></h2>
  
 Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.com/in/brunoro7/)_.<br>
 É uma **aplicação web fullstack**, **dockerizada**, cujo **objetivo** é **possibilitar que os usuários** cadastrados na plataforma, consigam realizar transferências monetárias, internas, **entre si**.
@@ -14,7 +14,7 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
 ---
 </div>
 
-## **Técnologias usadas**
+## **Tecnologias usadas**
 
 **Banco-de-Dados:**
 > Desenvolvido usando: [**PostgreSQL**](https://www.postgresql.org/);

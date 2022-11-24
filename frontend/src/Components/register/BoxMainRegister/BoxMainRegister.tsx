@@ -50,11 +50,9 @@ function BoxMainRegister() {
 
   const handleBtnRegister = async () => {
     const response = await createNewUser(registerInput);
-
     const OK_RESPONSE_STATUS = 201;
 
     if (response.status !== OK_RESPONSE_STATUS) {
-
       setIsErrorRegisterEnabled(true);
       return;
     }
@@ -94,7 +92,7 @@ function BoxMainRegister() {
 
         <BtnNavigateBackHome
           name={'Voltar'}
-          onClickBack={ handleBtnBackHome }
+          onClickGoOut={ handleBtnBackHome }
         />
       </div>
 

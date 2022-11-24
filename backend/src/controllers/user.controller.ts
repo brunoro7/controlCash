@@ -13,30 +13,24 @@ const userController = {
 
   async createNewUser(req: Request, res: Response) {
     const bodyParams = await userServices.checkReqBodyUser(req.body);
-
     const newAccount = await accountServices.createNewAccount();
     const bodyCheckedWithAccount = {
       ...bodyParams,
       accountId: newAccount.id,
     };
-
     const newUser: UserInterface = await userServices.createNewUser(bodyCheckedWithAccount);
-
     res.status(201).json(newUser);
   },
 
   async readUserById(req: Request, res: Response) {
     const userId = await apiChecks.checkIdError(req.params.id);
     const userById: UserInterface = await userServices.readUserById(userId);
-
     const { password, ...userWhitoutPass } = userById;
     const accountById = await accountServices.readAccountById(userById.accountId);
-
     const userToClient = {
       ...userWhitoutPass,
       balance: accountById.balance,
     };
-
     res.status(200).json(userToClient);
   }
 };

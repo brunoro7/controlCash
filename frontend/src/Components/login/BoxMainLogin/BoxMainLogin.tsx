@@ -1,17 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import BtnNavigateLogin from '../../login/BtnNavigateLogin/BtnNavigateLogin';
 import BtnNavigateGoToRegister from '../../login/BtnNavigateGoToRegister/BtnNavigateGoToRegister';
 import InputUsernameLogin from '../../login/InputUsernameLogin/InputUsernameLogin';
 import InputPasswordLogin from '../../login/InputPasswordLogin/InputPasswordLogin';
 import SpanErrorLogin from '../../login/SpanErrorLogin/SpanErrorLogin';
 import setUserLocalStorage from '../../../helpers/setUserLocalStorage';
-
-import './style/BoxMainLogin.css';
-
 import login from '../../../axiosServices/userServices/login';
 import getDataFromLocalStorage from '../../../helpers/getDataFromLocalStorage';
+
+import './style/BoxMainLogin.css';
 
 function BoxMainLogin() {
   const [isLoginEnabled, setIsLoginEnabled] = useState(false);
@@ -21,8 +19,6 @@ function BoxMainLogin() {
   });
   const [isErrorLoginEnabled, setIsErrorLoginEnabled] = useState(false);
   const navigate = useNavigate();
-
-  
 
   useEffect(() => {
     const user = getDataFromLocalStorage('user');
@@ -67,9 +63,7 @@ function BoxMainLogin() {
     const response = await login(loginInput);
 
     const OK_RESPONSE_STATUS = 201;
-
     if (response.status !== OK_RESPONSE_STATUS) {
-
       setIsErrorLoginEnabled(true);
       return;
     }

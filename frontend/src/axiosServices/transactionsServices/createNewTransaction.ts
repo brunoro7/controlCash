@@ -12,11 +12,8 @@ const createNewTransaction = async (user: userToCreateTransfer, token: string) =
       { headers: { Authorization: token } },
     );
 
-    console.log('AXIOS CREATE', response)
-
     return response;
   } catch (err: any) {
-    console.log('CREATE', err.response)
 
     return err.response;
   }

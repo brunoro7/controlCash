@@ -18,9 +18,6 @@ const transactionsController = {
   async createNewTransaction(req: Request, res: Response) {
     const usernameToCashIn = req.body.username;
     const valueTransaction = req.body.transferValue;
-
-    console.log('ENTROU NO BACK', valueTransaction);
-
     const userToCashOut = await jwtService.decodeToken(String(req.headers.authorization));
     const userToCredited: UserInterface = await userServices.readUserByUsername(usernameToCashIn);
 
@@ -37,68 +34,48 @@ const transactionsController = {
       objToNewTransaction.debitedAccountId,
       objToNewTransaction.creditedAccountId,
     );
-
     const createNewTransaction = await transactionServices
       .createNewTransaction(objToNewTransaction);
     res.status(201).json(createNewTransaction);
   },
 
   async readTransactionsByUserId(req: Request, res: Response) {
-
     const user = await jwtService.decodeToken(String(req.headers.authorization));
     if(!user) {
       throw new NotFoundError(msgDefaultToUserNotFound);
     }
-
     const arrayTransactionsByUserId: TransactionInterface[] = await transactionServices
       .readTransactionsByUserId(user.id);
-
     res.status(200).json(arrayTransactionsByUserId);
   },
 
   async readTransactionsCashOutByUserId(req: Request, res: Response) {
-
     const user = await jwtService.decodeToken(String(req.headers.authorization));
     if(!user) {
       throw new NotFoundError(msgDefaultToUserNotFound);
     }
-
     const arrayTransactionsCashOutByUserId: TransactionInterface[] = await transactionServices
       .readTransactionsCashOutByUserId(user.id);
-
-    console.log(arrayTransactionsCashOutByUserId);
-
     res.status(200).json(arrayTransactionsCashOutByUserId);
   },
 
   async readTransactionsCashInByUserId(req: Request, res: Response) {
-
     const user = await jwtService.decodeToken(String(req.headers.authorization));
     if(!user) {
       throw new NotFoundError(msgDefaultToUserNotFound);
     }
-
     const arrayTransactionsCashInByUserId: TransactionInterface[] = await transactionServices
       .readTransactionsCashInByUserId(user.id);
-
-    console.log(arrayTransactionsCashInByUserId);
-
     res.status(200).json(arrayTransactionsCashInByUserId);
   },
 
   async readTransactionsDateByUserId(req: Request, res: Response) {
-
     const user = await jwtService.decodeToken(String(req.headers.authorization));
     if(!user) {
       throw new NotFoundError(msgDefaultToUserNotFound);
     }
-
     const arrayTransactionsDateByUserId: TransactionInterface[] = await transactionServices
       .readTransactionsDateByUserId(String(req.body.date));
-
-    console.log('PRINT REQ.BODY.DATE', req.body.date);
-    console.log('MEU PRINT DATE', arrayTransactionsDateByUserId);
-
     res.status(200).json(arrayTransactionsDateByUserId);
   }
 

@@ -16,7 +16,6 @@ const userServices = {
     const checkLength = await apiChecks.checkUsernameLength(reqUserBody);
     const checkUniq = await apiChecks.checkUsernameUnique(reqUserBody);
     const checkPass = await apiChecks.checkPassword(reqUserBody);
-
     if(
       checkLength !== reqUserBody
       || checkUniq !== reqUserBody
@@ -24,7 +23,6 @@ const userServices = {
     ) {
       throw new ApiChecksFail('Fail with unknow error in some test on apiChecks;');
     }
-
     return reqUserBody;
   },
 
@@ -43,10 +41,8 @@ const userServices = {
       ...bodyNewUser,
       password: hash,
     };
-
     const { dataValues } = await User.create({...userCryptPass});
     const newUser = dataValues;
-
     if(!newUser) {
       throw new DbFailCreate(messageDbError);
     }

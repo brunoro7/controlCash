@@ -26,8 +26,6 @@ function BoxListTransfer() {
     handleCallTransfers();
   }, []);
 
-  console.log('VEIO DA API DO TRANS', transactionsList)
-
   return (
     <main className="box-ListTranferContent">
       <div className="box-BalanceAccount">

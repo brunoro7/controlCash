@@ -20,7 +20,6 @@ const apiChecks = {
   async checkUsernameLength(reqBody: ReqBodyUserInterface): Promise<ReqBodyUserInterface> {
     const { username } = reqBody;
     const minLength = 3;
-
     if(!username || username.length < minLength) {
       throw new InvalidLengthUsername(
         'The length of \'username\' must be at least 3 characters long.'
@@ -32,7 +31,6 @@ const apiChecks = {
   async checkUsernameUnique(reqBody: ReqBodyUserInterface): Promise<ReqBodyUserInterface> {
     const { username } = reqBody;
     await userServices.readUserByUsernameToRegister(username);
-
     return reqBody as ReqBodyUserInterface;
   },
 
@@ -44,7 +42,6 @@ const apiChecks = {
         'The length of \'password\' must be at least 8 characters long.'
       );
     }
-
     const regexCharLower = /[a-z]/.test(password);
     const regexCharUpper = /[A-Z]/.test(password);
     const regexNumber = /[0-9]/.test(password);
@@ -54,7 +51,6 @@ const apiChecks = {
         'The "password" must be at least 1 character lowercase, 1 character uppercase and 1 number.'
       );
     }
-
     return reqBody as ReqBodyUserInterface;
   },
 
