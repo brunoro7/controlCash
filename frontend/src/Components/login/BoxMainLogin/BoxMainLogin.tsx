@@ -100,7 +100,7 @@ function BoxMainLogin() {
 
         <BtnNavigateGoToRegister
           name={'Criar um cadastro'}
-          onClickBack={ handleBtnGoToRegister }
+          onClickGoToRegister={ handleBtnGoToRegister }
         />
       </div>
 
