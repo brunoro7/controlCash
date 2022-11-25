@@ -125,9 +125,11 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
 :-------------------------:|:-------------------------:
 ![Screeshot](./layoutLogin.png)  |  ![Screeshot](layoutRegister.png)
 
-**Página Principal (Logado)**  |  **Developed by**    
+**Página Principal (Logado)**  |  **Página Principal c/ Transações (Logado)**    
 :-------------------------:|:-------------------------:
-![Screeshot](./layoutHomeLogged.png)  |  **BrunoRo7**
+![Screeshot](./layoutHomeLogged.png)  |  ![Screeshot](./layoutHomeLoggedTrans.png)
+
+**Developed by** - **BrunoRo7**
 
 ---
 </div>
