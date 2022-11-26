@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node -r dotenv/config ./src",
+    "start": "mv .env_exemplo .env && npm run db:create && ts-node -r dotenv/config ./src",
     "db:create": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate",
     "dev": "ts-node-dev -r dotenv/config ./src",
     "test:lint": "eslint . --ext .ts",
