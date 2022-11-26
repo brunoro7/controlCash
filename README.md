@@ -71,7 +71,7 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
 > <details>
 > <summary><h4><strong>Diagrama</strong>:<h4></summary>
 >
-> <img src="./digram.png" alt="É uma imagem em diagrama, descrevendo a arquitetura das tabelas de users, accounts e transactions." />
+> <img src="./diagram.png" alt="É uma imagem em diagrama, descrevendo a arquitetura das tabelas de users, accounts e transactions." />
 
 </details>
 
@@ -170,62 +170,28 @@ Para cada um dos passos, haverá um exemplo do comando a ser digitado para fazer
 ```javascript
   git clone git@github.com:brunoro7/controlCash.git
 ```
-> **Obs: esse comando irá criar um novo diretório, já contendo toda a sua aplicação!**
+> **Obs: esse comando irá criar um novo diretório, já contendo toda a aplicação!**
 
-**4.** Entre no diretório '**controlCash/backend**', usando o comando abaixo:
+**4.** Entre no diretório '**controlCash**', usando o comando abaixo:
 ```javascript
-  cd controlCash/backend
+  cd controlCash
 ```
 
-**5.** Rode o comando abaixo para alterar o nome do .env_exemplo, para .env, para que ele se torne utilizável:
-```javascript
-  mv .env_exemplo .env
-```
-
-**6.** Rode o comando abaixo, para instalar as dependências do backend:
-```javascript
-  npm install
-```
-
-**7.** Volte para no diretório '**controlCash**', usando o comando abaixo:
-```javascript
-  cd ..
-```
-
-**8.** Vá para o diretório '**frontend**', usando o comando abaixo:
-```javascript
-  cd frontend
-```
-
-**9.** Rode o comando abaixo, para instalar as dependências do frontend:
-```javascript
-  npm install
-```
-
-**10.** Volte para no diretório '**controlCash**', usando o comando abaixo:
-```javascript
-  cd ..
-```
-
-**11.** Rode o comando do docker compose para rodar sua aplicação:
+**05.** **Para Iniciar a Aplicação**, rode o comando abaixo:
 ```javascript
   docker-compose up -d --build
 ```
-
-**12.** Entre no diretório '**backend**', usando o comando abaixo:
-```javascript
-  cd backend
-```
-
-**13.** Rode o comando para fazer a criação do banco de dados:
-```javascript
-  npm run db:create
-```
+> **Para Finalizar a Aplicação:**
+>```javascript
+>  docker-compose down
+>```
+>
+> **OBS:** Você pode usar a qualquer momento o comando acima para finalizar a aplicação, mas lembre-se que ao rodar esse comando, você irá perder todos os dados salvos no banco de dados até o momento!
 
 ---
 <div style="display:inline_block" align="center">
 
-### **Ao finalizar esse último (executar o script), seu aplicativo já estará funcionando no browser do seu navegador com o projeto rodando!**
+### **Após realizar o comando do "item 05", seu aplicativo já estará funcionando no browser do seu navegador com o projeto rodando!**
 > ## "Endereço" ==>  **http://localhost:3000/**
 
 ---
@@ -251,69 +217,28 @@ Entre na "pasta"/"diretório", que foi extraída, com nome '**controlCash**'.
 **3.** Abra o terminal na raíz da aplicação, que é a "pasta"/"diretório" '**controlCash**':
 > Você pode fazer isso usando o botão direito do mouse e clicando em abrir "pasta"/"diretório" no terminal.
 
-**4.** Entre no diretório '**controlCash/backend**', usando o comando abaixo:
-```javascript
-  cd /backend
-```
-
-**5.** Rode o comando abaixo para alterar o nome do .env_exemplo, para .env, para que ele se torne utilizável:
-```javascript
-  mv .env_exemplo .env
-```
-
-**6.** Rode o comando abaixo, para instalar as dependências do backend:
-```javascript
-  npm install
-```
-
-**7.** Volte para no diretório '**controlCash**', usando o comando abaixo:
-```javascript
-  cd ..
-```
-
-**8.** Vá para o diretório '**frontend**', usando o comando abaixo:
-```javascript
-  cd frontend
-```
-
-**9.** Rode o comando abaixo, para instalar as dependências do frontend:
-```javascript
-  npm install
-```
-
-**10.** Volte para no diretório '**controlCash**', usando o comando abaixo:
-```javascript
-  cd ..
-```
-
-**11.** Rode o comando do docker compose para rodar sua aplicação:
+**04.** **Para Iniciar a Aplicação**, rode o comando abaixo:
 ```javascript
   docker-compose up -d --build
 ```
-
-**12.** Entre no diretório '**backend**', usando o comando abaixo:
-```javascript
-  cd backend
-```
-
-**13.** Rode o comando para fazer a criação do banco de dados:
-```javascript
-  npm run db:create
-```
+> **Para Finalizar a Aplicação:**
+>```javascript
+>  docker-compose down
+>```
+>
+> **OBS:** Você pode usar a qualquer momento o comando acima para finalizar a aplicação, mas lembre-se que ao rodar esse comando, você irá perder todos os dados salvos no banco de dados até o momento!
 
 ---
 <div style="display:inline_block" align="center">
 
-### **Ao finalizar esse último passo (executar o script), seu aplicativo já estará funcionando no browser do seu navegador com o projeto rodando!**
+### **Após realizar o comando do "item 04", seu aplicativo já estará funcionando no browser do seu navegador com o projeto rodando!**
 > ## "Endereço" ==>  **http://localhost:3000/**
 
----
 </div>
 
 </details>
 
 ---
-
 <div style="display:inline_block" align="center">
 
 **Copyright © 2022 Bruno Rossetti**
