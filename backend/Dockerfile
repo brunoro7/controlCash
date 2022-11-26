@@ -1,6 +1,7 @@
-FROM node:16.14-alpine
-WORKDIR /backend/
+FROM node:alpine
+WORKDIR /backend
 COPY . .
 RUN npm install
+COPY . .
 EXPOSE 3007
-CMD ["npm", "start"]
+ENTRYPOINT [ "npm", "start" ]
