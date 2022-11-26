@@ -1,5 +1,7 @@
-FROM node:16.14-alpine
+# builder
+FROM node:alpine AS builderFrontEnd
 WORKDIR /frontend
-COPY . /frontend/
-RUN npm install
-CMD [ "npm", "start" ]
+COPY . .
+RUN npm install && npm run build
+EXPOSE 3000
+ENTRYPOINT [ "npm", "start" ]
