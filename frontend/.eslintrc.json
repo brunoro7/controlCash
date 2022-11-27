@@ -1,0 +1,105 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+      "react/prefer-stateless-function": [
+        0,
+        { "ignorePureComponents": true }
+      ],
+      // "react/destructuring-assignment": [0, "never"], // Essa 'rule' serve para não forçar a desestruturação;
+      "import/no-unresolved": 0,
+      "import/extensions": 0,
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+      "camelcase": "off",
+      "no-underscore-dangle": "off",
+      "no-console": "warn",
+      "arrow-parens": [
+        2,
+        "always"
+      ],
+      "quotes": [
+        2,
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "implicit-arrow-linebreak": "off",
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "consistent-return": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_",
+          "ignoreRestSiblings": true
+        }
+      ],
+      "no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_",
+          "ignoreRestSiblings": true
+        }
+      ],
+      "object-curly-newline": "off",
+      "max-params": [
+        "error",
+        4
+      ],
+      "max-lines": [
+        "error",
+        250
+      ],
+      "max-lines-per-function": [
+        "error",
+        {
+          "max": 250,
+          "skipBlankLines": true,
+          "skipComments": true
+        }
+      ],
+      "max-len": [
+        "error",
+        100,
+        {
+          "ignoreComments": true
+        }
+      ],
+      "complexity": [
+        "error",
+        5
+      ],
+      "import/no-extraneous-dependencies": [
+        "off"
+      ],
+      "indent": [
+        "error",
+        2
+      ],
+      "lines-between-class-members": "off",
+        "@typescript-eslint/lines-between-class-members": ["off"]
+    }
+}

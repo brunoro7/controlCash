@@ -5,13 +5,15 @@ import './style/InputPasswordLogin.css';
 
 class InputPasswordLogin extends React.Component <Props_InputPasswordLogin> {
   render() {
+    const { handleChange, inputValue } = this.props;
+
     return (
       <div className="box-inputPasswordLogin">
         <p className="title-inputPasswordLogin">Password</p>
         <label htmlFor="LoginInputPassword">
           <input
-            onChange={ (e) => this.props.handleChange(e.target.value) }
-            value={ this.props.inputValue }
+            onChange={(e) => handleChange(e.target.value)}
+            value={inputValue}
             className="input-passwordLogin"
             type="password"
             id="LoginInputPassword"

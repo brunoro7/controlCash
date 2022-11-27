@@ -82,25 +82,25 @@ function BoxMainLogin() {
       <h2>Login</h2>
 
       <InputUsernameLogin
-        handleChange={ handleUsernameChange }
-        inputValue={ loginInput.username }
+        handleChange={handleUsernameChange}
+        inputValue={loginInput.username}
       />
 
       <InputPasswordLogin
-        handleChange={ handlePasswordChange }
-        inputValue={ loginInput.password }
+        handleChange={handlePasswordChange}
+        inputValue={loginInput.password}
       />
 
       <div className="box-BtnsLogin">
         <BtnNavigateLogin
-          name={'Login'}
-          enabled={ isLoginEnabled }
-          handleClick={ handleBtnLogin }
+          name="Login"
+          enabled={isLoginEnabled}
+          handleClick={handleBtnLogin}
         />
 
         <BtnNavigateGoToRegister
-          name={'Criar um cadastro'}
-          onClickGoToRegister={ handleBtnGoToRegister }
+          name="Criar um cadastro"
+          onClickGoToRegister={handleBtnGoToRegister}
         />
       </div>
 

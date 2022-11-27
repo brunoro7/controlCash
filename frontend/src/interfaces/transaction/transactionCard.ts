@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface Transaction extends React.FC {
   createdAt: string,
   creditedAccountId: number,

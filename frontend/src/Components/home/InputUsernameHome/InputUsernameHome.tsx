@@ -4,13 +4,15 @@ import './style/InputUsernameHome.css';
 
 class InputUsernameHome extends React.Component <Props_InputUsernameHome> {
   render() {
+    const { inputValue, handleChange } = this.props;
+
     return (
       <div className="box-inputUsernameHome">
         <p className="title-inputUsernameHome">Username de quem irá receber:</p>
         <label htmlFor="inputUsernameHome">
           <input
-            onChange={ (e) => this.props.handleChange(String(e.target.value)) }
-            value={ this.props.inputValue }
+            onChange={(e) => handleChange(String(e.target.value))}
+            value={inputValue}
             className="input-usernameHome"
             type="text"
             id="inputUsernameHome"

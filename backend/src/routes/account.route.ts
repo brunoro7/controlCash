@@ -5,6 +5,6 @@ const accountRouter: Router = Router();
 
 accountRouter.post('/', accountController.createNewAccount);
 accountRouter.get('/:id', accountController.readAccountById);
-// accountRouter.get('/', accountController.readAllAccounts);
+accountRouter.get('/', accountController.readAllAccounts);
 
 export default accountRouter;

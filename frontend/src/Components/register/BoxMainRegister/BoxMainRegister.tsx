@@ -57,7 +57,7 @@ function BoxMainRegister() {
       return;
     }
     setUserLocalStorage(response.data);
-    localStorage.removeItem('user')
+    localStorage.removeItem('user');
     navigate('/');
   };
 
@@ -74,25 +74,25 @@ function BoxMainRegister() {
       <BoxInfosToRegister />
 
       <InputUsernameRegister
-        handleChange={ handleUsernameChange }
-        inputValue={ registerInput.username }
+        handleChange={handleUsernameChange}
+        inputValue={registerInput.username}
       />
 
       <InputPasswordRegister
-        handleChange={ handlePasswordChange }
-        inputValue={ registerInput.password }
+        handleChange={handlePasswordChange}
+        inputValue={registerInput.password}
       />
 
       <div className="box-BtnsRegister">
         <BtnNavigateRegister
-          name={'Cadastrar'}
-          enabled={ isRegisterEnabled }
-          handleClick={ handleBtnRegister }
+          name="Cadastrar"
+          enabled={isRegisterEnabled}
+          handleClick={handleBtnRegister}
         />
 
         <BtnNavigateBackHome
-          name={'Voltar'}
-          onClickGoOut={ handleBtnBackHome }
+          name="Voltar"
+          onClickGoOut={handleBtnBackHome}
         />
       </div>
 

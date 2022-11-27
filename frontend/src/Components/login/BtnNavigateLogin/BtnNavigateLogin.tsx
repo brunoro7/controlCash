@@ -4,16 +4,19 @@ import './style/BtnNavigateLogin.css';
 
 class BtnNavigateLogin extends React.Component <Props_BtnNavigateLogin> {
   render() {
-    const classToBtnExist = (this.props.enabled) ? 'box-btnLogin text-btnNameLogin' : 'box-btnLoginDisabled text-btnNameLogin';
+    const { handleClick, name, enabled } = this.props;
+
+    const classToBtnExist = (enabled)
+      ? 'box-btnLogin text-btnNameLogin' : 'box-btnLoginDisabled text-btnNameLogin';
     return (
       <button
         type="button"
         className={classToBtnExist}
-        onClick={this.props.handleClick}
-        disabled={!this.props.enabled}
+        onClick={handleClick}
+        disabled={!enabled}
       >
-        {this.props.name}
-    </button>
+        {name}
+      </button>
     );
   }
 }

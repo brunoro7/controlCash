@@ -4,14 +4,16 @@ import './style/BtnNavigateGoToRegister.css';
 
 class BtnNavigateGoToRegister extends React.Component <Props_BtnNavigateGoRegister> {
   render() {
+    const { onClickGoToRegister, name } = this.props;
+
     return (
       <button
         type="button"
         className="box-btnGoToRegister text-btnNameGoToRegister"
-        onClick={this.props.onClickGoToRegister}
+        onClick={onClickGoToRegister}
       >
-        {this.props.name}
-    </button>
+        {name}
+      </button>
     );
   }
 }

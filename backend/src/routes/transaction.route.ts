@@ -18,6 +18,6 @@ transactionRouter.get('/:id/cashin',
 transactionRouter.get('/:id/date',
   validateToken, transactionController.readTransactionsDateByUserId);
 
-// transactionRouter.get('/', transactionController.readAllTransactions);
+transactionRouter.get('/', transactionController.readAllTransactions);
 
 export default transactionRouter;

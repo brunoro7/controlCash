@@ -8,13 +8,12 @@ const createNewTransaction = async (user: userToCreateTransfer, token: string) =
   try {
     const response = await axios.post(
       `http://${host}:${port}/transaction/`,
-        user,
+      user,
       { headers: { Authorization: token } },
     );
 
     return response;
   } catch (err: any) {
-
     return err.response;
   }
 };

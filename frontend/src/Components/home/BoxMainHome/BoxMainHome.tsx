@@ -24,7 +24,6 @@ function BoxMainHome() {
     const userStorage = getDataFromLocalStorage('user');
     setUsernameProfile(userStorage.username);
     const validateTransfer = () => {
-
       const MIN_USERNAME_LENGTH = 3;
       const isUsernameValid = transferInput.username.length >= MIN_USERNAME_LENGTH;
 
@@ -74,28 +73,31 @@ function BoxMainHome() {
 
   return (
     <main className="box-TranfersHome">
-      <h2>Perfil do {usernameProfile}</h2>
+      <h2>
+        Perfil do&nbsp;
+        {usernameProfile}
+      </h2>
 
       <InputUsernameHome
-        handleChange={ handleUsernameChange }
-        inputValue={ transferInput.username }
+        handleChange={handleUsernameChange}
+        inputValue={transferInput.username}
       />
 
       <InputTransferValueHome
-        handleChange={ handleValueChange }
-        inputValue={ transferInput.transferValue }
+        handleChange={handleValueChange}
+        inputValue={transferInput.transferValue}
       />
 
       <div className="box-BtnsLogin">
         <BtnNavigateTransfer
-          name={'Transferir'}
-          enabled={ isTransferEnabled }
-          handleClick={ handleBtnTranfer }
+          name="Transferir"
+          enabled={isTransferEnabled}
+          handleClick={handleBtnTranfer}
         />
 
         <BtnNavigateGoOut
-          name={'Logout'}
-          onClickGoOut={ handleBtnGoOut }
+          name="Logout"
+          onClickGoOut={handleBtnGoOut}
         />
       </div>
 

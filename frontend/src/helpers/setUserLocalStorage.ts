@@ -1,4 +1,4 @@
-import userBodyToLocalStorage from "../interfaces/user/userBodyToLocalStorage";
+import userBodyToLocalStorage from '../interfaces/user/userBodyToLocalStorage';
 
 const setUserLocalStorage = (user: userBodyToLocalStorage) => {
   const userString = JSON.stringify(user);

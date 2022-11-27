@@ -4,14 +4,16 @@ import './style/BtnNavigateBackHome.css';
 
 class BtnNavigateBackHome extends React.Component <Props_BtnNavigateGoOut> {
   render() {
+    const { onClickGoOut, name } = this.props;
+
     return (
       <button
         type="button"
         className="box-btnBackHome text-btnNameBackHome"
-        onClick={this.props.onClickGoOut}
+        onClick={onClickGoOut}
       >
-        {this.props.name}
-    </button>
+        {name}
+      </button>
     );
   }
 }
