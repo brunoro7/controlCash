@@ -4,14 +4,16 @@ import './style/BtnNavigateGoOut.css';
 
 class BtnNavigateGoOut extends React.Component <Props_BtnNavigateGoOut> {
   render() {
+    const { name, onClickGoOut } = this.props;
+
     return (
       <button
         type="button"
         className="box-btnGoOut"
-        onClick={this.props.onClickGoOut}
+        onClick={onClickGoOut}
       >
-        <p className="text-btnNameGoOut">{this.props.name}</p>
-    </button>
+        <p className="text-btnNameGoOut">{name}</p>
+      </button>
     );
   }
 }

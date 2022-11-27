@@ -9,12 +9,12 @@ function Home() {
     <div className="body-Home">
 
       <header className="box-bodyHeaderHome">
-          <h1>Control Cash</h1>
+        <h1>Control Cash</h1>
       </header>
 
       <main className="box-mainHome">
-          <BoxMainHome />
-          <BoxListTransfer />
+        <BoxMainHome />
+        <BoxListTransfer />
       </main>
 
       <footer className="box-bodyFooterHome">

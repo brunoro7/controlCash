@@ -7,7 +7,7 @@ function Register() {
     <div className="body-Register">
 
       <header className="box-bodyHeaderRegister">
-          <h1>Control Cash</h1>
+        <h1>Control Cash</h1>
       </header>
 
       <main className="box-mainRegister">

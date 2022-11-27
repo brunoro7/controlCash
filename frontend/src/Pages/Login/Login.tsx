@@ -7,7 +7,7 @@ function Login() {
     <div className="body-Login">
 
       <header className="box-bodyHeaderLogin">
-          <h1>Control Cash</h1>
+        <h1>Control Cash</h1>
       </header>
 
       <main className="box-mainLogin">

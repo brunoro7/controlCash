@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import readTransactionsByUserId from '../../../axiosServices/transactionsServices/readTransactionsByUserId';
+import { useEffect, useState } from 'react';
+import readTransactionsByUserId
+  from '../../../axiosServices/transactionsServices/readTransactionsByUserId';
 import readUserById from '../../../axiosServices/userServices/readUserById';
 import getDataFromLocalStorage from '../../../helpers/getDataFromLocalStorage';
 import Transaction from '../../../interfaces/transaction/transactionCard';
@@ -16,13 +17,15 @@ function BoxListTransfer() {
 
     const handleCallTransfers = async () => {
       const responseUser = await readUserById(userStorage.id);
-      const responseTransactions = await readTransactionsByUserId(userStorage.id, userStorage.token);
+      const responseTransactions = await
+      readTransactionsByUserId(userStorage.id, userStorage.token);
+
       setUser(responseUser.data);
-      if(Array.isArray(responseTransactions.data)){
+      if (Array.isArray(responseTransactions.data)) {
         settransactionsList([]);
       }
       settransactionsList(responseTransactions.data);
-    }
+    };
     handleCallTransfers();
   }, []);
 
@@ -35,21 +38,19 @@ function BoxListTransfer() {
 
       <div className="box-ListCardsRepo">
         {
-          transactionsList?.map((transaction: Transaction) => {
-            return (
-              (
-                <div key={transaction.id}>
-                  <CardTransfer
-                    createdAt={transaction.createdAt}
-                    creditedAccountId={transaction.creditedAccountId}
-                    debitedAccountId={transaction.debitedAccountId}
-                    id={transaction.id}
-                    value={transaction.value}
-                  />
-                </div>
-              )
-            );
-          })
+          transactionsList?.map((transaction: Transaction) => (
+            (
+              <div key={transaction.id}>
+                <CardTransfer
+                  createdAt={transaction.createdAt}
+                  creditedAccountId={transaction.creditedAccountId}
+                  debitedAccountId={transaction.debitedAccountId}
+                  id={transaction.id}
+                  value={transaction.value}
+                />
+              </div>
+            )
+          ))
         }
       </div>
 

@@ -4,16 +4,19 @@ import './style/BtnNavigateRegister.css';
 
 class BtnNavigateRegister extends React.Component <Props_BtnNavigateRegister> {
   render() {
-    const classToBtnExist = (this.props.enabled) ? 'box-btnRegister text-btnNameRegister' : 'box-btnRegisterDisabled text-btnNameRegister';
+    const { handleClick, enabled, name } = this.props;
+    const classToBtnExist = (enabled)
+      ? 'box-btnRegister text-btnNameRegister' : 'box-btnRegisterDisabled text-btnNameRegister';
+
     return (
       <button
         type="button"
         className={classToBtnExist}
-        onClick={this.props.handleClick}
-        disabled={!this.props.enabled}
+        onClick={handleClick}
+        disabled={!enabled}
       >
-        {this.props.name}
-    </button>
+        {name}
+      </button>
     );
   }
 }
