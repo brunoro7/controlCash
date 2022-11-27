@@ -7,29 +7,30 @@ import './style/CardTransfer.css';
 class CardTransfer extends React.Component <Transaction> {
   render() {
     const { id, createdAt, value, debitedAccountId, creditedAccountId } = this.props;
+
     return (
       <div className="box-cardTransferContent">
         <p>
-          `O número(id) da dua transação realizada é: `
+          O número(id) da dua transação realizada é:&nbsp;
           <strong>{id}</strong>
         </p>
         <p>
-          `Transação realizada na data: `
+          Transação realizada na data:&nbsp;
           <strong>{convertDate(createdAt)}</strong>
         </p>
         <p>
-          `Com um valor total de: `
+          Com um valor total de:&nbsp;
           <strong>
-            `R$ `
+            R$&nbsp;
             {formatPriceToBRL(value)}
           </strong>
         </p>
         <p>
-          `Descontado da conta número: `
+          Descontado da conta número:&nbsp;
           <strong>{debitedAccountId}</strong>
         </p>
         <p>
-          `Creditado da conta número: `
+          Creditado da conta número:&nbsp;
           <strong>{creditedAccountId}</strong>
         </p>
       </div>

@@ -74,7 +74,7 @@ function BoxMainHome() {
   return (
     <main className="box-TranfersHome">
       <h2>
-        `Perfil do `
+        Perfil do&nbsp;
         {usernameProfile}
       </h2>
 
