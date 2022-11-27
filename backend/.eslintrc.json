@@ -36,7 +36,7 @@
       "always"
     ],
     "no-underscore-dangle": "off",
-      "no-console": "off",
+      "no-console": "warn",
       "camelcase": "warn",
       "arrow-parens": [2, "always"],
       "implicit-arrow-linebreak": "off",
