@@ -15,11 +15,11 @@ class CardTransfer extends React.Component <Transaction> {
           <strong>{id}</strong>
         </p>
         <p>
-          Transação realizada na data:&nbsp;
+          Transação realizada:&nbsp;
           <strong>{convertDate(createdAt)}</strong>
         </p>
         <p>
-          Com um valor total de:&nbsp;
+          Com o valor total de:&nbsp;
           <strong>
             R$&nbsp;
             {formatPriceToBRL(value)}
