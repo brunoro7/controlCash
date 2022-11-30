@@ -11,7 +11,7 @@ class CardTransfer extends React.Component <Transaction> {
     return (
       <div className="box-cardTransferContent">
         <p>
-          O número(id) da dua transação realizada é:&nbsp;
+          O número(id) da transação realizada é:&nbsp;
           <strong>{id}</strong>
         </p>
         <p>

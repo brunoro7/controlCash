@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   height: 99vh;
-  width: 99vw;
+  width: 99.9vw;
 }
 
 .box-bodyHeaderRegister {
@@ -25,9 +25,12 @@
   align-items: center;
   align-self: center;
   display: flex;
-  flex-direction: column;
-  width: 99.1vw;
-  margin-top: 10vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 99.9vw;
+  margin-top: 10.2vh;
+  margin-bottom: 6vh;
+  justify-content: space-evenly;
 }
 
 .box-bodyFooterRegister {

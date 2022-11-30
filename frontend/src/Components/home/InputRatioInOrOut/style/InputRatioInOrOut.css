@@ -1,0 +1,41 @@
+.box-inputRatioInOrOut {
+  color: #001813;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  width: 280px;
+  align-items: center;
+}
+
+.title-inputRatioInOrOut {
+  font-size: 18.5px;
+  font-weight: 700;
+  margin: 0;
+  text-align: start;
+  text-indent: 10px;
+}
+
+.labelPrinc-inputRatioInOrOut {
+  border: dotted 0.5px #001813;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  display: flex;
+  margin: 10px 0 0 0;
+}
+
+.labelSec-inputRatioInOrOut {
+  align-items: center;
+  display: flex;
+  margin: 10px;
+  color: #001813;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.labelSec-inputRatioInOrOut:hover {
+  color: #38B6FF;
+}
+
+.input-RatioInOrOut {
+  cursor: pointer;
+}
