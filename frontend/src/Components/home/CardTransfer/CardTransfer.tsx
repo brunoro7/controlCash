@@ -25,13 +25,13 @@ class CardTransfer extends React.Component <Transaction> {
             {formatPriceToBRL(value)}
           </strong>
         </p>
-        <p>
+        <p className="debited">
           Descontado da conta número:&nbsp;
-          <strong>{debitedAccountId}</strong>
+          <strong className="text-accounts">{debitedAccountId}</strong>
         </p>
-        <p>
-          Creditado da conta número:&nbsp;
-          <strong>{creditedAccountId}</strong>
+        <p className="credited">
+          Creditado na conta número:&nbsp;
+          <strong className="text-accounts">{creditedAccountId}</strong>
         </p>
       </div>
     );

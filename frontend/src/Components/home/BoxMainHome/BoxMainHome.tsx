@@ -9,9 +9,11 @@ import SpanErrorHome from '../SpanErrorHome/SpanErrorHome';
 import getDataFromLocalStorage from '../../../helpers/getDataFromLocalStorage';
 import createNewTransaction from '../../../axiosServices/transactionsServices/createNewTransaction';
 import './style/BoxMainHome.css';
+import clearUserFromLocalstorage from '../../../helpers/clearUserFromLocalstorage';
 
 function BoxMainHome() {
   const [usernameProfile, setUsernameProfile] = useState('');
+  const [msgError, setMsgError] = useState('');
   const [isTransferEnabled, setIsTransferEnabled] = useState(false);
   const [transferInput, setTransferInputInput] = useState({
     username: '',
@@ -55,21 +57,24 @@ function BoxMainHome() {
 
     const OK_RESPONSE_STATUS = 201;
     if (response.status !== OK_RESPONSE_STATUS) {
+      if (String(response.data.message).includes('balance')) {
+        setMsgError('Você não possui saldo suficiente.');
+      }
+      if (String(response.data.message).includes('User')) {
+        setMsgError('Usuário não encontrado.');
+      }
       setIsErrorTransferEnabled(true);
       return;
     }
     window.location.reload();
   };
 
-  const clearUserFromLocalstorage = () => {
-    localStorage.removeItem('user');
-  };
   const handleBtnGoOut = async () => {
     clearUserFromLocalstorage();
     navigate('/');
   };
 
-  const invalidErrorHome = (<span><SpanErrorHome /></span>);
+  const invalidErrorHome = (<span><SpanErrorHome msgError={msgError} /></span>);
 
   return (
     <main className="box-TranfersHome">

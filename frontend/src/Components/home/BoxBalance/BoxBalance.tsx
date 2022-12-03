@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-// import SpanErrorHome from '../SpanErrorHome/SpanErrorHome';
 import readUserById from '../../../axiosServices/userServices/readUserById';
 import getDataFromLocalStorage from '../../../helpers/getDataFromLocalStorage';
 import './style/BoxBalance.css';

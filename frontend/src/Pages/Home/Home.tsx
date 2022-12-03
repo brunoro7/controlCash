@@ -19,7 +19,9 @@ function Home() {
           <BoxMainHome />
           <BoxBalance />
         </section>
-        <BoxListTransfer />
+        <section className="section-tranfersHome">
+          <BoxListTransfer />
+        </section>
       </main>
 
       <footer className="box-bodyFooterHome">

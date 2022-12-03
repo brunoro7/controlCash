@@ -15,7 +15,6 @@ import readTransactionsByUserIdCashIn
 import convertSimpleDate from '../../../helpers/convertSimpleDate';
 import SpanTransferEmpty from '../SpanTransferEmpty/SpanTransferEmpty';
 
-import './style/BoxDateFilter.css';
 import './style/BoxListTransfer.css';
 
 function BoxListTransfer() {
@@ -114,47 +113,39 @@ function BoxListTransfer() {
   const isEmptyTransactions = checkFilters?.length === 0 ? (<SpanTransferEmpty />) : '';
 
   return (
-    <main className="box-ListTranferContent">
+    <main className="box-ListTransferContent">
 
-      <section className="box-DateFilterHome">
+      <section className="box-FiltersHome">
 
-        <div className="box-titleDateFilterHome">
-          <h2 className="title-DateFilterHome">
+        <div className="title-FilterHome">
+          <h2>
             Filtrar transações:
           </h2>
         </div>
 
-        <div className="box-InputAndBtnsFilter">
-
-          <div className="box-InputDateFilter">
-            <InputRatioInOrOut
-              inputValue={ratioInput.ratioValue}
-              handleChange={handleChangeRatio}
-            />
-          </div>
-
+        <div className="box-InputRatiosFilter">
+          <InputRatioInOrOut
+            inputValue={ratioInput.ratioValue}
+            handleChange={handleChangeRatio}
+          />
         </div>
 
-        <div className="box-InputAndBtnsFilter">
+        <div className="box-InputDateFilter">
+          <InputDateFilter
+            handleChange={handleDateInputChange}
+            inputValue={dateInput.dateValue}
+          />
+        </div>
 
-          <div className="box-InputDateFilter">
-            <InputDateFilter
-              handleChange={handleDateInputChange}
-              inputValue={dateInput.dateValue}
-            />
-          </div>
-
-          <div className="box-BtnsDateFilter">
-            <BtnFilterByDate
-              onClickFilterEnable={handleBtnFilterByDate}
-              name="Filtrar"
-            />
-            <BtnFilterDefault
-              onClickFilterDisable={handleBtnFilterDefault}
-              name="Sem Filtro"
-            />
-          </div>
-
+        <div className="box-BtnsDateFilter">
+          <BtnFilterByDate
+            onClickFilterEnable={handleBtnFilterByDate}
+            name="Filtrar"
+          />
+          <BtnFilterDefault
+            onClickFilterDisable={handleBtnFilterDefault}
+            name="Sem Filtro"
+          />
         </div>
 
       </section>

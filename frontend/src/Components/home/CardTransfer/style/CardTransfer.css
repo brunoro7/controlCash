@@ -2,6 +2,18 @@
   align-items: center;
   border: 1px dotted rgba(250, 95, 95, 0.7);
   border-radius: 5px;
-  margin: 10px 0;
-  padding: 15px;
+  margin-top: 10px;
+  padding: 0 25px;
+}
+
+.debited {
+  color: rgba(172, 5, 5, 0.85);
+}
+
+.credited {
+  color: rgb(8, 103, 8, 0.85);
+}
+
+.text-accounts {
+  color: #191919f2;
 }
