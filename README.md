@@ -71,7 +71,7 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
 > <details>
 > <summary><h4><strong>Diagrama</strong>:<h4></summary>
 >
-> <img src="./diagram.png" alt="É uma imagem em diagrama, descrevendo a arquitetura das tabelas de users, accounts e transactions." />
+> <img src="./imgs/diagram.png" alt="É uma imagem em diagrama, descrevendo a arquitetura das tabelas de users, accounts e transactions." />
 
 </details>
 
@@ -123,11 +123,11 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
 
 **Página de Login**  |  **Página de Cadastro**    
 :-------------------------:|:-------------------------:
-![Screeshot](./layoutLogin.png)  |  ![Screeshot](layoutRegister.png)
+![Screeshot](./imgs/layoutLogin.png)  |  ![Screeshot](./imgs/layoutRegister.png)
 
 **Página Principal (Logado)**  |  **Página Principal c/ Transações (Logado)**    
 :-------------------------:|:-------------------------:
-![Screeshot](./layoutHomeLogged.png)  |  ![Screeshot](./layoutHomeLoggedTrans.png)
+![Screeshot](./imgs/layoutHomeLogged.png)  |  ![Screeshot](./imgs/layoutHomeLoggedTrans.png)
 
 **Developed by** - **BrunoRo7**
 
