@@ -207,7 +207,7 @@ Para cada um dos passos, haverá um exemplo do comando a ser digitado para fazer
 
 **1.** Faça o **download do .zip** do projeto no diretório de sua escolha, usando o botão '**Code**', mostrado na imagem:
 
-  ![Screeshot](./imgRefBtbCodeToDownloadZip.jpeg)
+  ![Screeshot](./imgs/imgRefBtbCodeToDownloadZip.jpeg)
 
 **2.** Descompactar o **.zip** com a ferramenta de sua preferência, e acessar o diretório criado:
 > **Obs: essa "pasta"/"diretório" irá conter as configurações da sua aplicação como um todo, restando apenas rodar o aplicativo e iniciar o banco de dados!**
