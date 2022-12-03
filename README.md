@@ -71,7 +71,7 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
 > <details>
 > <summary><h4><strong>Diagrama</strong>:<h4></summary>
 >
-> <img src="./diagram.png" alt="É uma imagem em diagrama, descrevendo a arquitetura das tabelas de users, accounts e transactions." />
+> <img src="./imgs/diagram.png" alt="É uma imagem em diagrama, descrevendo a arquitetura das tabelas de users, accounts e transactions." />
 
 </details>
 
@@ -91,8 +91,8 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
 - [X] **7.** Todo **usuário logado** (ou seja, que apresente um token válido) deverá ser capaz de realizar um **cash-out** informando o **"username" do usuário** que sofrerá o **cash-in**, caso apresente **balance suficiente** para isso. Atente-se ao fato de que um usuário não deverá ter a possibilidade de realizar uma transferência para si mesmo.
 - [X] **8.** Toda nova **transação bem-sucedida** deverá ser registrada na **tabela Transactions**. Em **casos de falhas** transacionais, a **tabela Transactions não deverá ser afetada**.
 - [X] **9.** Todo **usuário logado** (ou seja, que apresente um token válido) deverá ser capaz de **visualizar as transações financeiras (cash-out e cash-in) que participou**. Caso o usuário não tenha participado de uma determinada transação, ele nunca poderá ter acesso à ela.
-- *[X] **10.** Todo **usuário logado** (ou seja, que apresente um token válido) deverá ser capaz de **filtrar as transações** financeiras que participou por:
-  - [ ] **-** **Data de realização** da transação;
+- [X] **10.** Todo **usuário logado** (ou seja, que apresente um token válido) deverá ser capaz de **filtrar as transações** financeiras que participou por:
+  - [X] **-** **Data de realização** da transação;
   - [X] **-** Transações de **cash-out**;
   - [X] **-** Transações de **cash-in**;
 
@@ -111,7 +111,7 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
   - [X] **-** Balance atual (Saldo em conta) do usuário;
   - [X] **-** Seção voltada à realização de transferências para outros usuários, a partir do username de quem sofrerá o cash-in;
   - [X] **-** Tabela com os detalhes de todas as transações que o usuário participou;
-  - [ ] **-** Mecanismo para filtrar a tabela por data de transação e/ou transações do tipo cash-in/cash-out;
+  - [X] **-** Mecanismo para filtrar a tabela por data de transação e/ou transações do tipo cash-in/cash-out;
   - [X] **-** Botão para realizar o log-out;
 
 </details>
@@ -123,11 +123,11 @@ Este projeto foi desenvolvido e realizado por _[Bruno Ro7](https://www.linkedin.
 
 **Página de Login**  |  **Página de Cadastro**    
 :-------------------------:|:-------------------------:
-![Screeshot](./layoutLogin.png)  |  ![Screeshot](layoutRegister.png)
+![Screeshot](./imgs/layoutLogin.png)  |  ![Screeshot](./imgs/layoutRegister.png)
 
 **Página Principal (Logado)**  |  **Página Principal c/ Transações (Logado)**    
 :-------------------------:|:-------------------------:
-![Screeshot](./layoutHomeLogged.png)  |  ![Screeshot](./layoutHomeLoggedTrans.png)
+![Screeshot](./imgs/layoutHomeLogged.png)  |  ![Screeshot](./imgs/layoutHomeLoggedTrans.png)
 
 **Developed by** - **BrunoRo7**
 

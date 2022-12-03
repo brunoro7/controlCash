@@ -11,27 +11,27 @@ class CardTransfer extends React.Component <Transaction> {
     return (
       <div className="box-cardTransferContent">
         <p>
-          O número(id) da dua transação realizada é:&nbsp;
+          O número(id) da transação realizada é:&nbsp;
           <strong>{id}</strong>
         </p>
         <p>
-          Transação realizada na data:&nbsp;
+          Transação realizada:&nbsp;
           <strong>{convertDate(createdAt)}</strong>
         </p>
         <p>
-          Com um valor total de:&nbsp;
+          Com o valor total de:&nbsp;
           <strong>
             R$&nbsp;
             {formatPriceToBRL(value)}
           </strong>
         </p>
-        <p>
+        <p className="debited">
           Descontado da conta número:&nbsp;
-          <strong>{debitedAccountId}</strong>
+          <strong className="text-accounts">{debitedAccountId}</strong>
         </p>
-        <p>
-          Creditado da conta número:&nbsp;
-          <strong>{creditedAccountId}</strong>
+        <p className="credited">
+          Creditado na conta número:&nbsp;
+          <strong className="text-accounts">{creditedAccountId}</strong>
         </p>
       </div>
     );

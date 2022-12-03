@@ -17,6 +17,7 @@ function BoxMainRegister() {
     password: '',
   });
   const [isErrorRegisterEnabled, setIsErrorRegisterEnabled] = useState(false);
+  const [msgError, setMsgError] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -53,6 +54,12 @@ function BoxMainRegister() {
     const OK_RESPONSE_STATUS = 201;
 
     if (response.status !== OK_RESPONSE_STATUS) {
+      if (String(response.data.message).includes('password')) {
+        setMsgError('O password precisa estar de acordo com as regras!');
+      }
+      if (String(response.data.message).includes('User')) {
+        setMsgError('Já existe um usuário com esse \'Username\'.');
+      }
       setIsErrorRegisterEnabled(true);
       return;
     }
@@ -65,7 +72,7 @@ function BoxMainRegister() {
     navigate('/');
   };
 
-  const invalidErrorRegister = (<span><SpanErrorRegister /></span>);
+  const invalidErrorRegister = (<span><SpanErrorRegister msgError={msgError} /></span>);
 
   return (
     <main className="box-FormRegister">

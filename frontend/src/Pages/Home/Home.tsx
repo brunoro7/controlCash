@@ -1,4 +1,6 @@
 import BoxFooter from '../../Components/general/BoxFooter/BoxFooter';
+import BoxBalance from '../../Components/home/BoxBalance/BoxBalance';
+// import BoxDateFilter from '../../Components/home/BoxDateFilter/BoxDateFilter';
 import BoxListTransfer from '../../Components/home/BoxListTransfer/BoxListTransfer';
 import BoxMainHome from '../../Components/home/BoxMainHome/BoxMainHome';
 
@@ -13,8 +15,13 @@ function Home() {
       </header>
 
       <main className="box-mainHome">
-        <BoxMainHome />
-        <BoxListTransfer />
+        <section className="section-mainHome">
+          <BoxMainHome />
+          <BoxBalance />
+        </section>
+        <section className="section-tranfersHome">
+          <BoxListTransfer />
+        </section>
       </main>
 
       <footer className="box-bodyFooterHome">

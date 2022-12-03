@@ -3,31 +3,36 @@
   display: flex;
   flex-direction: column;
   height: 99vh;
-  width: 99vw;
+  width: 99.9vw;
 }
 
 .box-bodyHeaderLogin {
   align-items: center;
+  background-color: #191919f2;
+  border-bottom: solid 0.7px #38B6FF;
+  color: whitesmoke;
   display: flex;
+  font-size: 15px;
   flex-direction: column;
+  font-weight: 700;
+  height: 7.5vh;
+  justify-content: center;
   position: fixed;
+  text-transform: uppercase;
   top: 0;
   width: 100%;
-  height: 10vh;
-  justify-content: center;
-  font-weight: 700;
-  color: whitesmoke;
-  text-transform: uppercase;
-  font-size: 15px;
 }
 
 .box-mainLogin {
   align-items: center;
   align-self: center;
   display: flex;
-  flex-direction: column;
-  width: 99.1vw;
-  margin-top: 10vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 99.9vw;
+  margin-top: 15vh;
+  margin-bottom: 6vh;
+  justify-content: space-evenly;
 }
 
 .box-bodyFooterLogin {

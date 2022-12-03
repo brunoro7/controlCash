@@ -1,49 +1,53 @@
-.box-ListTranferContent {
+.box-ListTransferContent {
   align-items: center;
-  background-color: whitesmoke;
-  border: solid 0.7px #38B6FF;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  width: 45vw;
+  margin-bottom: 15px;
+}
+
+/** ======= Box Filters ======= **/
+.box-FiltersHome {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border: solid 0.7px #38B6FF;
   box-shadow: 0 1px 5px 0 rgba(64, 178, 206, 0.579), 0 1.5px 3px 1px rgba(52, 143, 213, 0.579);
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
-  margin-bottom: 10px;
   min-width: 400px;
   width: 45vw;
 }
 
-.box-BalanceAccount {
-  color: #001813;
+.title-FilterHome {
   display: flex;
-  flex-direction: column;
-  font-weight: 400;
-  width: 280px;
-}
-
-.title-inputBalanceAccount {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 0;
-  text-align: start;
-  text-indent: 5px;
-}
-
-.input-BalanceAccount {
-  align-items: center;
-  border: solid 1px #001813;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  color: #343434;
-  display: flex;
-  height: 25px;
   justify-content: center;
-  margin-top: 5px;
-  text-indent: 5px;
-  font-weight: 700;
-  width: 270px;
 }
 
-.box-ListTranfer {
+/** ======= Box Filter Ratio ======= **/
+.box-InputRatiosFilter {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+/** ======= Box Filter Date ======= **/
+.box-InputDateFilter {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.box-BtnsDateFilter {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+/** ======= Box Cards Transacitons ======= **/
+.box-ListCardsRepo {
   align-items: center;
   background-color: whitesmoke;
   border: solid 0.7px #38B6FF;
@@ -55,4 +59,7 @@
   width: 45vw;
   margin-top: 10px;
   overflow-y: scroll;
+  max-height: 35vh;
+  margin-bottom: 7vh;
+  padding-bottom: 10px;
 }
